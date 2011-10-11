@@ -1,0 +1,313 @@
+Oct 11 20:29:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /pantient with parameters array (  'module' => 'pantient',  'action' => 'index',)
+Oct 11 20:29:33 symfony [info] {myUser} Automatic user logout due to timeout
+Oct 11 20:29:33 symfony [info] {myUser} User is not authenticated
+Oct 11 20:29:33 symfony [info] {sfFrontWebController} Action "pantient/index" does not exist
+Oct 11 20:29:33 symfony [err] {sfError404Exception} Action "pantient/index" does not exist.
+Oct 11 20:29:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 11 20:29:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:29:33 symfony [info] {sfWebDebugLogger} Configuration 334.25 ms (6)
+Oct 11 20:29:33 symfony [info] {sfWebDebugLogger} Factories 401.18 ms (1)
+Oct 11 20:29:39 symfony [info] {sfPatternRouting} Match route "patient" (/patient.:sf_format) for /patient with parameters array (  'module' => 'patient',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:29:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:29:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:29:39 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 11 20:29:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:29:39 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM patient p - ()
+Oct 11 20:29:39 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/indexSuccess.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_assets.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_flashes.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_header.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_batch_actions.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_actions.php"
+Oct 11 20:29:39 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_footer.php"
+Oct 11 20:29:39 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:29:39 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:29:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:29:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Configuration 501.47 ms (12)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Factories 67.03 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Action "patient/index" 63.36 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 158.86 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_assets" 1.93 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_flashes" 1.98 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_list_header" 1.87 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_filters" 76.72 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_filters_field" 56.95 ms (6)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_list" 3.39 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_list_batch_actions" 6.68 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_list_actions" 3.36 ms (1)
+Oct 11 20:29:39 symfony [info] {sfWebDebugLogger} Partial "patient/_list_footer" 1.94 ms (1)
+Oct 11 20:29:40 symfony [info] {sfWebResponse} Send content (75193 o)
+Oct 11 20:30:09 symfony [info] {sfPatternRouting} Match route "patient_collection" (/patient/:action/action.:sf_format) for /patient/filter/action with parameters array (  'module' => 'patient',  'action' => 'filter',  'sf_format' => 'html',)
+Oct 11 20:30:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:30:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:30:09 symfony [info] {patientActions} Call "patientActions->executeFilter()"
+Oct 11 20:30:09 symfony [info] {sfFrontWebController} Redirect to "http://localhost/backend_dev.php/patient"
+Oct 11 20:30:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Oct 11 20:30:09 symfony [info] {sfWebResponse} Send header "Location: http://localhost/backend_dev.php/patient"
+Oct 11 20:30:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:30:09 symfony [info] {sfWebDebugLogger} Configuration 27.76 ms (10)
+Oct 11 20:30:09 symfony [info] {sfWebDebugLogger} Factories 65.70 ms (1)
+Oct 11 20:30:09 symfony [info] {sfWebDebugLogger} Action "patient/filter" 7.88 ms (1)
+Oct 11 20:30:09 symfony [info] {sfWebResponse} Send content (111 o)
+Oct 11 20:30:10 symfony [info] {sfPatternRouting} Match route "patient" (/patient.:sf_format) for /patient with parameters array (  'module' => 'patient',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:30:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:30:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:30:10 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 11 20:30:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:30:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM patient p - ()
+Oct 11 20:30:10 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/indexSuccess.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_assets.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_flashes.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_header.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_batch_actions.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_actions.php"
+Oct 11 20:30:10 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_footer.php"
+Oct 11 20:30:10 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:30:10 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:30:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:30:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Configuration 20.11 ms (11)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Factories 62.17 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Action "patient/index" 93.76 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 132.39 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_assets" 2.26 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_flashes" 1.97 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_list_header" 2.07 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_filters" 74.78 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_filters_field" 54.56 ms (6)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_list" 2.54 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_list_batch_actions" 3.32 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_list_actions" 2.64 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebDebugLogger} Partial "patient/_list_footer" 1.88 ms (1)
+Oct 11 20:30:10 symfony [info] {sfWebResponse} Send content (75420 o)
+Oct 11 20:32:15 symfony [info] {sfPatternRouting} Match route "patient" (/patient.:sf_format) for /patient with parameters array (  'module' => 'patient',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:32:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:32:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:32:15 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 11 20:32:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:32:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM patient p - ()
+Oct 11 20:32:15 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/indexSuccess.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_assets.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_flashes.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_header.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_filters_field.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_batch_actions.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_actions.php"
+Oct 11 20:32:15 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoPatient/templates/_list_footer.php"
+Oct 11 20:32:15 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:32:15 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:32:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:32:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Configuration 238.21 ms (12)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Factories 308.51 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Action "patient/index" 100.19 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 139.51 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_assets" 2.74 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_flashes" 2.57 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_list_header" 2.48 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_filters" 75.16 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_filters_field" 55.80 ms (6)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_list" 2.93 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_list_batch_actions" 3.91 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_list_actions" 3.09 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebDebugLogger} Partial "patient/_list_footer" 2.48 ms (1)
+Oct 11 20:32:15 symfony [info] {sfWebResponse} Send content (75354 o)
+Oct 11 20:32:47 symfony [info] {sfPatternRouting} Match route "consultant" (/consultant.:sf_format) for /consultant with parameters array (  'module' => 'consultant',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:32:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:32:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:32:48 symfony [info] {consultantActions} Call "consultantActions->executeIndex()"
+Oct 11 20:32:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:32:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM consultant c - ()
+Oct 11 20:32:48 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/indexSuccess.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_assets.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_flashes.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_list_header.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_filters.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_filters_field.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_filters_field.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_filters_field.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_list.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_list_batch_actions.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_list_actions.php"
+Oct 11 20:32:48 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoConsultant/templates/_list_footer.php"
+Oct 11 20:32:48 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:32:48 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:32:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:32:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Configuration 480.87 ms (12)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Factories 71.22 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Action "consultant/index" 61.06 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} View "Success" for "consultant/index" 101.85 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_assets" 2.86 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_flashes" 2.02 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_list_header" 1.87 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_filters" 28.31 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_filters_field" 13.77 ms (3)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_list" 2.41 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_list_batch_actions" 3.23 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_list_actions" 2.55 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebDebugLogger} Partial "consultant/_list_footer" 1.89 ms (1)
+Oct 11 20:32:48 symfony [info] {sfWebResponse} Send content (56560 o)
+Oct 11 20:32:54 symfony [info] {sfPatternRouting} Match route "event" (/event.:sf_format) for /event with parameters array (  'module' => 'event',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:32:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:32:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:32:54 symfony [info] {eventActions} Call "eventActions->executeIndex()"
+Oct 11 20:32:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:32:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM event e - ()
+Oct 11 20:32:54 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/indexSuccess.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_assets.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_flashes.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_header.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:32:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p - ()
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:32:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.firstname AS c__firstname, c.lastname AS c__lastname, c.job AS c__job FROM consultant c - ()
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_batch_actions.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_actions.php"
+Oct 11 20:32:55 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_footer.php"
+Oct 11 20:32:55 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:32:55 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:32:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:32:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Configuration 496.39 ms (12)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Factories 70.22 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Action "event/index" 69.05 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (4)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} View "Success" for "event/index" 171.11 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_assets" 1.90 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_flashes" 1.97 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_list_header" 1.87 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_filters" 92.19 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_filters_field" 70.74 ms (5)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_list" 4.85 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_list_batch_actions" 3.34 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_list_actions" 2.55 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebDebugLogger} Partial "event/_list_footer" 1.87 ms (1)
+Oct 11 20:32:55 symfony [info] {sfWebResponse} Send content (72961 o)
+Oct 11 20:35:36 symfony [info] {sfPatternRouting} Match route "event" (/event.:sf_format) for /event with parameters array (  'module' => 'event',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:35:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:35:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:35:36 symfony [info] {eventActions} Call "eventActions->executeIndex()"
+Oct 11 20:35:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:35:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM event e - ()
+Oct 11 20:35:36 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/indexSuccess.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_assets.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_flashes.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_header.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p - ()
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.firstname AS c__firstname, c.lastname AS c__lastname, c.job AS c__job FROM consultant c - ()
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_batch_actions.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_actions.php"
+Oct 11 20:35:36 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_footer.php"
+Oct 11 20:35:36 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:35:36 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:35:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:35:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Configuration 20.57 ms (11)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Factories 68.74 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Action "event/index" 97.97 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (4)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} View "Success" for "event/index" 140.81 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_assets" 2.06 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_flashes" 2.54 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_list_header" 2.36 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_filters" 84.71 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_filters_field" 65.36 ms (5)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_list" 3.11 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_list_batch_actions" 3.24 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_list_actions" 2.55 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebDebugLogger} Partial "event/_list_footer" 2.04 ms (1)
+Oct 11 20:35:37 symfony [info] {sfWebResponse} Send content (72989 o)
+Oct 11 20:35:47 symfony [info] {sfPatternRouting} Match route "event_collection" (/event/:action/action.:sf_format) for /event/filter/action with parameters array (  'module' => 'event',  'action' => 'filter',  'sf_format' => 'html',)
+Oct 11 20:35:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:35:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:35:47 symfony [info] {eventActions} Call "eventActions->executeFilter()"
+Oct 11 20:35:47 symfony [info] {sfFrontWebController} Redirect to "http://localhost/backend_dev.php/event"
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send header "Location: http://localhost/backend_dev.php/event"
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Configuration 23.75 ms (10)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Factories 70.40 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Action "event/filter" 7.90 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send content (109 o)
+Oct 11 20:35:47 symfony [info] {sfPatternRouting} Match route "event" (/event.:sf_format) for /event with parameters array (  'module' => 'event',  'action' => 'index',  'sf_format' => 'html',)
+Oct 11 20:35:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 11 20:35:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 11 20:35:47 symfony [info] {eventActions} Call "eventActions->executeIndex()"
+Oct 11 20:35:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 11 20:35:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM event e - ()
+Oct 11 20:35:47 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/indexSuccess.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_assets.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_flashes.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_header.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p - ()
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_filters_field.php"
+Oct 11 20:35:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.firstname AS c__firstname, c.lastname AS c__lastname, c.job AS c__job FROM consultant c - ()
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_batch_actions.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_actions.php"
+Oct 11 20:35:47 symfony [info] {sfPartialView} Render "C:\dev\source\symfony\paramedical\cache\backend\dev\modules/autoEvent/templates/_list_footer.php"
+Oct 11 20:35:47 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:35:47 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\backend\templates/layout.php"
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Configuration 20.51 ms (11)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Factories 70.66 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Action "event/index" 125.21 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (4)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} View "Success" for "event/index" 170.60 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_assets" 2.64 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_flashes" 2.81 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_list_header" 2.58 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_filters" 96.77 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_filters_field" 75.70 ms (5)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_list" 2.98 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_list_batch_actions" 4.90 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_list_actions" 3.36 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebDebugLogger} Partial "event/_list_footer" 2.68 ms (1)
+Oct 11 20:35:47 symfony [info] {sfWebResponse} Send content (73161 o)

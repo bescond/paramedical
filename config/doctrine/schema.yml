@@ -1,0 +1,74 @@
+Patient:
+  connection: doctrine
+  tableName: patient
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+      notnull: false
+    firstname:
+      type: string(255)
+      notnull: true
+    lastname:
+      type: string(255)
+      notnull: true
+    birthdate:
+      type: date
+      notnull: false
+    address:
+      type: string()
+      notnull: false
+    zip:
+      type: string(5)
+      notnull: false
+    city:
+      type: string(255)
+      notnull: false
+
+Consultant:
+  connection: doctrine
+  tableName: consultant
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+      notnull: false
+    firstname:
+      type: string(255)
+      notnull: true
+    lastname:
+      type: string(255)
+      notnull: true
+    job:
+      type: string(255)
+      notnull: true
+
+Event:
+  connection: doctrine
+  tableName: event
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+      notnull: false
+    date:
+      type: datetime
+      notnull: true
+    title:
+      type: string(255)
+      notnull: true
+    descritpion:
+      type: string()
+      notnull: false
+    patient_id:
+      type: integer
+      notnull: true
+    consultant_id:
+      type: integer
+      notnull: false
+  relations:
+    Patient: { onDelete: CASCADE, local: patient_id, foreign: id, foreignAlias: Patients }
+    Consultant: { onDelete: CASCADE, local: consultant_id, foreign: id, foreignAlias: Consultants }

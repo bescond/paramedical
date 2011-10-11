@@ -1,0 +1,43 @@
+event:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Event
+    module:               event
+    prefix_path:          /event
+    column:               id
+    with_wildcard_routes: true
+
+consultant:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Consultant
+    module:               consultant
+    prefix_path:          /consultant
+    column:               id
+    with_wildcard_routes: true
+
+patient:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Patient
+    module:               patient
+    prefix_path:          /patient
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*
