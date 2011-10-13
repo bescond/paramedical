@@ -9,6 +9,7 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <?php include_partial('global/header') ?>
     <?php echo $sf_content ?>
   </body>
 </html>

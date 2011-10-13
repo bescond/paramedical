@@ -54,3 +54,15 @@ sf_guard_signout:
 sf_guard_password:
   url:   /request_password
   param: { module: sfGuardAuth, action: password }
+
+manage_users:
+  url:   /sfGuardUser
+  param: { module: sfGuardUser, action: index }
+  
+manage_permissions:
+  url:   /sfGuardPermission
+  param: { module: sfGuardPermission, action: index }
+  
+manage_groups:
+  url:   /sfGuardGroup
+  param: { module: sfGuardGroup, action: index }
