@@ -3339,3 +3339,106 @@ Oct 11 18:49:48 symfony [info] {sfWebDebugLogger} Factories 669.33 ms (1)
 Oct 11 18:49:48 symfony [info] {sfWebDebugLogger} Action "default/index" 0.55 ms (1)
 Oct 11 18:49:48 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 169.86 ms (1)
 Oct 11 18:49:49 symfony [info] {sfWebResponse} Send content (29604 o)
+Oct 13 18:38:37 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/index" (/).
+Oct 13 18:38:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 18:38:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:38:37 symfony [info] {sfWebDebugLogger} Configuration 566.52 ms (5)
+Oct 13 18:38:37 symfony [info] {sfWebDebugLogger} Factories 326.42 ms (1)
+Oct 13 18:38:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 18:38:41 symfony [err] {InvalidArgumentException} Unable to parse file "C:\dev\source\symfony\paramedical\apps\frontend/config/filters.yml": A YAML file cannot contain tabs as indentation at line 5 (	class: sfGuardRememberMeFilter).
+Oct 13 18:38:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 18:38:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:38:41 symfony [info] {sfWebDebugLogger} Configuration 58.04 ms (8)
+Oct 13 18:38:41 symfony [info] {sfWebDebugLogger} Factories 56.77 ms (1)
+Oct 13 18:38:46 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/login" (/).
+Oct 13 18:38:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 18:38:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:38:46 symfony [info] {sfWebDebugLogger} Configuration 17.86 ms (5)
+Oct 13 18:38:46 symfony [info] {sfWebDebugLogger} Factories 66.11 ms (1)
+Oct 13 18:40:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 18:40:13 symfony [err] {InvalidArgumentException} Unable to parse file "C:\dev\source\symfony\paramedical\apps\frontend/config/filters.yml": A YAML file cannot contain tabs as indentation at line 5 (	class: sfGuardRememberMeFilter).
+Oct 13 18:40:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 18:40:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:40:13 symfony [info] {sfWebDebugLogger} Configuration 24.40 ms (8)
+Oct 13 18:40:13 symfony [info] {sfWebDebugLogger} Factories 64.44 ms (1)
+Oct 13 18:41:12 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 18:41:12 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 13 18:41:12 symfony [err] {sfException} Call to undefined method myUser::isAnonymous.
+Oct 13 18:41:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 18:41:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:41:12 symfony [info] {sfWebDebugLogger} Configuration 54.70 ms (9)
+Oct 13 18:41:12 symfony [info] {sfWebDebugLogger} Factories 61.16 ms (1)
+Oct 13 18:42:32 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 18:42:32 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 13 18:42:32 symfony [err] {sfException} Call to undefined method myUser::isAnonymous.
+Oct 13 18:42:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 18:42:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:42:32 symfony [info] {sfWebDebugLogger} Configuration 313.64 ms (9)
+Oct 13 18:42:32 symfony [info] {sfWebDebugLogger} Factories 60.93 ms (1)
+Oct 13 18:42:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 18:42:34 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 13 18:42:34 symfony [err] {sfException} Call to undefined method myUser::isAnonymous.
+Oct 13 18:42:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 18:42:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:42:34 symfony [info] {sfWebDebugLogger} Configuration 21.58 ms (8)
+Oct 13 18:42:34 symfony [info] {sfWebDebugLogger} Factories 62.89 ms (1)
+Oct 13 18:42:53 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/login" (/).
+Oct 13 18:42:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 18:42:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 18:42:53 symfony [info] {sfWebDebugLogger} Configuration 16.30 ms (5)
+Oct 13 18:42:53 symfony [info] {sfWebDebugLogger} Factories 58.50 ms (1)
+Oct 13 19:19:46 symfony [info] {myUser} Automatic user logout due to timeout
+Oct 13 19:19:46 symfony [info] {myUser} User is not authenticated
+Oct 13 19:19:46 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/login" (/).
+Oct 13 19:19:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 19:19:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:19:46 symfony [info] {sfWebDebugLogger} Configuration 9.37 ms (5)
+Oct 13 19:19:46 symfony [info] {sfWebDebugLogger} Factories 64.83 ms (1)
+Oct 13 19:19:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 19:19:50 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 13 19:19:50 symfony [err] {sfException} Call to undefined method myUser::isAnonymous.
+Oct 13 19:19:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 19:19:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:19:50 symfony [info] {sfWebDebugLogger} Configuration 54.24 ms (9)
+Oct 13 19:19:50 symfony [info] {sfWebDebugLogger} Factories 64.44 ms (1)
+Oct 13 19:27:41 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 19:27:41 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Oct 13 19:27:41 symfony [err] {sfException} Call to undefined method myUser::isAnonymous.
+Oct 13 19:27:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 13 19:27:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:27:41 symfony [info] {sfWebDebugLogger} Configuration 344.29 ms (9)
+Oct 13 19:27:41 symfony [info] {sfWebDebugLogger} Factories 64.25 ms (1)
+Oct 13 19:53:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Oct 13 19:53:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 13 19:53:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 13 19:53:37 symfony [info] {sfBasicSecurityFilter} Action "default/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Oct 13 19:53:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 13 19:53:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 13 19:53:37 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 13 19:53:37 symfony [info] {sfPHPView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Oct 13 19:53:37 symfony [info] {sfPartialView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Oct 13 19:53:37 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 13 19:53:37 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 13 19:53:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Oct 13 19:53:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:53:37 symfony [info] {sfWebDebugLogger} Configuration 716.88 ms (12)
+Oct 13 19:53:37 symfony [info] {sfWebDebugLogger} Factories 336.80 ms (1)
+Oct 13 19:53:37 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 86.08 ms (1)
+Oct 13 19:53:37 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 88.04 ms (1)
+Oct 13 19:53:37 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 28.92 ms (1)
+Oct 13 19:53:37 symfony [info] {sfWebResponse} Send content (33778 o)
+Oct 13 19:55:02 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/event" (/).
+Oct 13 19:55:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 19:55:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:55:02 symfony [info] {sfWebDebugLogger} Configuration 18.64 ms (5)
+Oct 13 19:55:02 symfony [info] {sfWebDebugLogger} Factories 64.05 ms (1)
+Oct 13 19:58:04 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/sfGuardUser" (/).
+Oct 13 19:58:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 19:58:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:58:04 symfony [info] {sfWebDebugLogger} Configuration 605.43 ms (5)
+Oct 13 19:58:04 symfony [info] {sfWebDebugLogger} Factories 358.88 ms (1)
+Oct 13 19:58:08 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/event" (/).
+Oct 13 19:58:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 13 19:58:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 13 19:58:09 symfony [info] {sfWebDebugLogger} Configuration 21.66 ms (5)
+Oct 13 19:58:09 symfony [info] {sfWebDebugLogger} Factories 57.87 ms (1)

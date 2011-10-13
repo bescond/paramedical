@@ -1,0 +1,4 @@
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Administrator permission

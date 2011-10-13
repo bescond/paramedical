@@ -1,0 +1,8 @@
+Initialize Data
+$ php symfony doctrine:build --all
+
+Backend Modules
+$ php symfony doctrine:generate-admin backend Patient --module=patient
+
+Install Plugin
+$ ./symfony plugin:install --release=5.0.0 sfDoctrineGuardPlugin

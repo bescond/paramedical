@@ -9,6 +9,6 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+    Welcome on nice application
   </body>
 </html>

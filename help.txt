@@ -1,5 +1,0 @@
-Initialize Data
-$ php symfony doctrine:build --all
-
-Backend Modules
-$ php symfony doctrine:generate-admin backend Patient --module=patient
