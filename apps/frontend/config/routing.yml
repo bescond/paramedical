@@ -4,7 +4,7 @@
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: patient, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules
@@ -12,8 +12,8 @@ homepage:
 #   url:   /:module
 #   param: { action: index }
 # 
-# default:
-#   url:   /:module/:action/*
+default:
+  url:   /:module/:action/*
 
 sf_guard_signin:
   url:   /login

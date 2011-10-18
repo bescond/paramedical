@@ -12,8 +12,5 @@ class PatientForm extends BasePatientForm
 {
   public function configure()
   {
-  	//$this->getWidget('birthdate')->configure(array('format' => '%month% ## %day% ## %year%'));
-  	//var_dump($this->getWidget('birthdate'));
-  	//die('OH YEAH!');
   }
 }

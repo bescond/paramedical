@@ -31,16 +31,7 @@ patient:
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
-
-# generic rules
-# please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
+  param: { module: patient, action: index }
 
 # routing rules for sfGuard
 sf_guard_signin:

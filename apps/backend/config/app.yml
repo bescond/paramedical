@@ -6,3 +6,5 @@
 all:
   sf_guard_plugin:
     routes_register: false
+    sf_guard_plugin_routes_register: false
+    

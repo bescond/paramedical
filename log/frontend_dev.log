@@ -3442,3 +3442,692 @@ Oct 13 19:58:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Oct 13 19:58:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Oct 13 19:58:09 symfony [info] {sfWebDebugLogger} Configuration 21.66 ms (5)
 Oct 13 19:58:09 symfony [info] {sfWebDebugLogger} Factories 57.87 ms (1)
+Oct 17 16:46:29 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/patient" (/).
+Oct 17 16:46:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 17 16:46:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 16:46:29 symfony [info] {sfWebDebugLogger} Configuration 21.37 ms (5)
+Oct 17 16:46:29 symfony [info] {sfWebDebugLogger} Factories 93.80 ms (1)
+Oct 17 19:58:58 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 19:58:58 symfony [info] {myUser} Automatic user logout due to timeout
+Oct 17 19:58:58 symfony [info] {myUser} User is not authenticated
+Oct 17 19:58:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 19:58:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 19:58:58 symfony [info] {sfBasicSecurityFilter} Action "patient/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Oct 17 19:58:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 19:58:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 19:58:58 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 17 19:58:58 symfony [info] {sfPHPView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Oct 17 19:58:58 symfony [info] {sfPartialView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Oct 17 19:58:59 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 19:58:59 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 19:58:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Oct 17 19:58:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 19:58:59 symfony [info] {sfWebDebugLogger} Configuration 715.52 ms (12)
+Oct 17 19:58:59 symfony [info] {sfWebDebugLogger} Factories 342.61 ms (1)
+Oct 17 19:58:59 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 17.16 ms (1)
+Oct 17 19:58:59 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 56.85 ms (1)
+Oct 17 19:58:59 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 10.12 ms (1)
+Oct 17 19:58:59 symfony [info] {sfWebResponse} Send content (35066 o)
+Oct 17 19:59:29 symfony [info] {sfPatternRouting} Match route "sf_guard_signout" (/logout) for /logout with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signout',)
+Oct 17 19:59:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 19:59:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 19:59:29 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignout()"
+Oct 17 19:59:29 symfony [info] {myUser} User is not authenticated
+Oct 17 19:59:29 symfony [info] {sfFrontWebController} Redirect to "http://localhost/frontend_dev.php/"
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send header "Location: http://localhost/frontend_dev.php/"
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send cookie "sfRemember": ""
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Configuration 36.73 ms (8)
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Factories 78.53 ms (1)
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signout" 3.31 ms (1)
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send content (105 o)
+Oct 17 19:59:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 19:59:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 19:59:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 19:59:29 symfony [info] {sfBasicSecurityFilter} Action "patient/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Oct 17 19:59:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 19:59:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 19:59:29 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 17 19:59:29 symfony [info] {sfPHPView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Oct 17 19:59:29 symfony [info] {sfPartialView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Oct 17 19:59:29 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 19:59:29 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Oct 17 19:59:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Configuration 26.99 ms (12)
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Factories 55.02 ms (1)
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 15.15 ms (1)
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 40.24 ms (1)
+Oct 17 19:59:29 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 10.14 ms (1)
+Oct 17 19:59:30 symfony [info] {sfWebResponse} Send content (34256 o)
+Oct 17 20:00:25 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:00:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:00:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:00:25 symfony [info] {sfBasicSecurityFilter} Action "patient/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Oct 17 20:00:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:00:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:00:25 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 17 20:00:25 symfony [info] {sfPHPView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Oct 17 20:00:25 symfony [info] {sfPartialView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Oct 17 20:00:25 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:00:25 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:00:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Oct 17 20:00:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:00:25 symfony [info] {sfWebDebugLogger} Configuration 35.80 ms (12)
+Oct 17 20:00:25 symfony [info] {sfWebDebugLogger} Factories 95.77 ms (1)
+Oct 17 20:00:25 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 16.99 ms (1)
+Oct 17 20:00:25 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 40.88 ms (1)
+Oct 17 20:00:25 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 11.40 ms (1)
+Oct 17 20:00:25 symfony [info] {sfWebResponse} Send content (34255 o)
+Oct 17 20:01:06 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:01:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:01:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:01:06 symfony [info] {sfBasicSecurityFilter} Action "patient/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Oct 17 20:01:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:01:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:01:06 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 17 20:01:06 symfony [info] {sfPHPView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Oct 17 20:01:06 symfony [info] {sfPartialView} Render "C:/dev/source/symfony/paramedical/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Oct 17 20:01:06 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:01:06 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:01:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Oct 17 20:01:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:01:06 symfony [info] {sfWebDebugLogger} Configuration 27.72 ms (12)
+Oct 17 20:01:06 symfony [info] {sfWebDebugLogger} Factories 69.57 ms (1)
+Oct 17 20:01:06 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 14.92 ms (1)
+Oct 17 20:01:06 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 34.07 ms (1)
+Oct 17 20:01:06 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 9.67 ms (1)
+Oct 17 20:01:06 symfony [info] {sfWebResponse} Send content (35179 o)
+Oct 17 20:01:12 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:01:12 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admin, 1)
+Oct 17 20:01:12 symfony [info] {myUser} User is authenticated
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.group_id AS s2__group_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_group_permission s2 ON s.id = s2.permission_id WHERE (s2.group_id IN (?)) - (1)
+Oct 17 20:01:12 symfony [info] {myUser} Add credential(s) "admin"
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2011-10-17 20:01:12, 2011-10-17 20:01:12, 1)
+Oct 17 20:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (1)
+Oct 17 20:01:12 symfony [info] {sfFrontWebController} Redirect to "http://localhost/frontend_dev.php/"
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send header "Location: http://localhost/frontend_dev.php/"
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Configuration 22.32 ms (8)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Factories 94.05 ms (1)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 224.75 ms (1)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.12 ms (7)
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send content (105 o)
+Oct 17 20:01:12 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:01:12 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:01:12 symfony [info] {patientActions} Forward to action "default/module"
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:01:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:01:12 symfony [info] {defaultActions} Call "defaultActions->executeModule()"
+Oct 17 20:01:12 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib/controller/default/templates/moduleSuccess.php"
+Oct 17 20:01:12 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\controller\default\templates/defaultLayout.php"
+Oct 17 20:01:12 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\controller\default\templates/defaultLayout.php"
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Configuration 84.93 ms (13)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Factories 63.07 ms (1)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Action "patient/index" 115.11 ms (1)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} Action "default/module" 0.38 ms (1)
+Oct 17 20:01:12 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 43.70 ms (1)
+Oct 17 20:01:12 symfony [info] {sfWebResponse} Send content (33352 o)
+Oct 17 20:01:20 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/patient" (/).
+Oct 17 20:01:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 17 20:01:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:01:20 symfony [info] {sfWebDebugLogger} Configuration 16.10 ms (5)
+Oct 17 20:01:20 symfony [info] {sfWebDebugLogger} Factories 61.91 ms (1)
+Oct 17 20:01:34 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/patient/" (/).
+Oct 17 20:01:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 17 20:01:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:01:34 symfony [info] {sfWebDebugLogger} Configuration 23.50 ms (5)
+Oct 17 20:01:34 symfony [info] {sfWebDebugLogger} Factories 56.39 ms (1)
+Oct 17 20:02:27 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/patient/index" (/).
+Oct 17 20:02:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 17 20:02:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:02:27 symfony [info] {sfWebDebugLogger} Configuration 16.23 ms (5)
+Oct 17 20:02:27 symfony [info] {sfWebDebugLogger} Factories 64.81 ms (1)
+Oct 17 20:02:46 symfony [err] {InvalidArgumentException} Unable to parse file "C:\dev\source\symfony\paramedical\apps\frontend/config/routing.yml": Indentation problem at line 15 ( default:)
+Oct 17 20:02:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 17 20:02:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:02:46 symfony [info] {sfWebDebugLogger} Configuration 17.16 ms (5)
+Oct 17 20:02:46 symfony [info] {sfWebDebugLogger} Factories 233.57 ms (1)
+Oct 17 20:03:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:03:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:03:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:03:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:03:06 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:03:06 symfony [info] {patientActions} Forward to action "default/module"
+Oct 17 20:03:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:03:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:03:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:03:06 symfony [info] {defaultActions} Call "defaultActions->executeModule()"
+Oct 17 20:03:06 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib/controller/default/templates/moduleSuccess.php"
+Oct 17 20:03:06 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\controller\default\templates/defaultLayout.php"
+Oct 17 20:03:06 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\controller\default\templates/defaultLayout.php"
+Oct 17 20:03:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:03:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:03:06 symfony [info] {sfWebDebugLogger} Configuration 182.37 ms (13)
+Oct 17 20:03:06 symfony [info] {sfWebDebugLogger} Factories 209.51 ms (1)
+Oct 17 20:03:06 symfony [info] {sfWebDebugLogger} Action "patient/index" 45.55 ms (1)
+Oct 17 20:03:06 symfony [info] {sfWebDebugLogger} Action "default/module" 0.43 ms (1)
+Oct 17 20:03:06 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 28.22 ms (1)
+Oct 17 20:03:06 symfony [info] {sfWebResponse} Send content (33384 o)
+Oct 17 20:03:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:03:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:03:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:03:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:03:39 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:03:39 symfony [info] {patientActions} Forward to action "default/module"
+Oct 17 20:03:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:03:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:03:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:03:39 symfony [info] {defaultActions} Call "defaultActions->executeModule()"
+Oct 17 20:03:39 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib/controller/default/templates/moduleSuccess.php"
+Oct 17 20:03:39 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\controller\default\templates/defaultLayout.php"
+Oct 17 20:03:39 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\controller\default\templates/defaultLayout.php"
+Oct 17 20:03:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:03:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:03:39 symfony [info] {sfWebDebugLogger} Configuration 30.88 ms (12)
+Oct 17 20:03:39 symfony [info] {sfWebDebugLogger} Factories 60.53 ms (1)
+Oct 17 20:03:39 symfony [info] {sfWebDebugLogger} Action "patient/index" 42.49 ms (1)
+Oct 17 20:03:39 symfony [info] {sfWebDebugLogger} Action "default/module" 0.39 ms (1)
+Oct 17 20:03:39 symfony [info] {sfWebDebugLogger} View "Success" for "default/module" 26.73 ms (1)
+Oct 17 20:03:39 symfony [info] {sfWebResponse} Send content (33383 o)
+Oct 17 20:05:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:05:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:05:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:05:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:05:32 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:05:32 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:05:32 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:05:32 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:05:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:05:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:05:32 symfony [info] {sfWebDebugLogger} Configuration 48.92 ms (10)
+Oct 17 20:05:32 symfony [info] {sfWebDebugLogger} Factories 64.99 ms (1)
+Oct 17 20:05:32 symfony [info] {sfWebDebugLogger} Action "patient/index" 0.39 ms (1)
+Oct 17 20:05:32 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 52.91 ms (1)
+Oct 17 20:05:32 symfony [info] {sfWebResponse} Send content (29278 o)
+Oct 17 20:05:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:05:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:05:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:05:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:05:46 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:05:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:05:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:05:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:05:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:05:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:05:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:05:55 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:05:55 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:05:55 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:05:55 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:05:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:05:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:05:55 symfony [info] {sfWebDebugLogger} Configuration 21.93 ms (9)
+Oct 17 20:05:55 symfony [info] {sfWebDebugLogger} Factories 59.00 ms (1)
+Oct 17 20:05:55 symfony [info] {sfWebDebugLogger} Action "patient/index" 0.39 ms (1)
+Oct 17 20:05:55 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 25.61 ms (1)
+Oct 17 20:05:55 symfony [info] {sfWebResponse} Send content (29275 o)
+Oct 17 20:09:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:09:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:09:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:09:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:09:31 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:09:31 symfony [err] {sfRenderException} The template "indexError.php" does not exist or is unreadable in "".
+Oct 17 20:09:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 17 20:09:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:09:31 symfony [info] {sfWebDebugLogger} Configuration 21.58 ms (9)
+Oct 17 20:09:31 symfony [info] {sfWebDebugLogger} Factories 59.66 ms (1)
+Oct 17 20:09:31 symfony [info] {sfWebDebugLogger} Action "patient/index" 0.39 ms (1)
+Oct 17 20:09:31 symfony [info] {sfWebDebugLogger} View "Error" for "patient/index" 88.16 ms (1)
+Oct 17 20:09:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:09:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:09:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:09:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:09:54 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:09:54 symfony [err] {sfRenderException} The template "indexError.php" does not exist or is unreadable in "".
+Oct 17 20:09:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 17 20:09:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:09:54 symfony [info] {sfWebDebugLogger} Configuration 23.64 ms (9)
+Oct 17 20:09:54 symfony [info] {sfWebDebugLogger} Factories 82.15 ms (1)
+Oct 17 20:09:54 symfony [info] {sfWebDebugLogger} Action "patient/index" 0.39 ms (1)
+Oct 17 20:09:54 symfony [info] {sfWebDebugLogger} View "Error" for "patient/index" 83.05 ms (1)
+Oct 17 20:10:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:10:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:10:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:10:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:10:50 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:10:50 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:10:50 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:10:50 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:10:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:10:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:10:50 symfony [info] {sfWebDebugLogger} Configuration 22.57 ms (9)
+Oct 17 20:10:50 symfony [info] {sfWebDebugLogger} Factories 60.98 ms (1)
+Oct 17 20:10:50 symfony [info] {sfWebDebugLogger} Action "patient/index" 0.39 ms (1)
+Oct 17 20:10:50 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 25.18 ms (1)
+Oct 17 20:10:50 symfony [info] {sfWebResponse} Send content (29275 o)
+Oct 17 20:24:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:24:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:24:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:24:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:24:48 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:24:48 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:24:48 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:24:48 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:24:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:24:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:24:48 symfony [info] {sfWebDebugLogger} Configuration 21.95 ms (9)
+Oct 17 20:24:48 symfony [info] {sfWebDebugLogger} Factories 59.63 ms (1)
+Oct 17 20:24:48 symfony [info] {sfWebDebugLogger} Action "patient/index" 8.68 ms (1)
+Oct 17 20:24:48 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 29.37 ms (1)
+Oct 17 20:24:48 symfony [info] {sfWebResponse} Send content (30115 o)
+Oct 17 20:24:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/patient/index with parameters array (  'module' => 'patient',  'action' => 'patient',  'index' => true,)
+Oct 17 20:24:52 symfony [info] {sfFrontWebController} Action "patient/patient" does not exist
+Oct 17 20:24:52 symfony [err] {sfError404Exception} Action "patient/patient" does not exist.
+Oct 17 20:24:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 17 20:24:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:24:52 symfony [info] {sfWebDebugLogger} Configuration 11.20 ms (5)
+Oct 17 20:24:52 symfony [info] {sfWebDebugLogger} Factories 54.89 ms (1)
+Oct 17 20:25:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:25:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:25:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:25:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:25:09 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:25:09 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:25:09 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:25:09 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:25:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:25:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:25:09 symfony [info] {sfWebDebugLogger} Configuration 22.91 ms (9)
+Oct 17 20:25:09 symfony [info] {sfWebDebugLogger} Factories 62.10 ms (1)
+Oct 17 20:25:09 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.17 ms (1)
+Oct 17 20:25:09 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 31.40 ms (1)
+Oct 17 20:25:09 symfony [info] {sfWebResponse} Send content (30075 o)
+Oct 17 20:25:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:25:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:25:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:25:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:25:13 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:25:13 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:25:13 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:25:13 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:25:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:25:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:25:13 symfony [info] {sfWebDebugLogger} Configuration 22.63 ms (9)
+Oct 17 20:25:13 symfony [info] {sfWebDebugLogger} Factories 61.96 ms (1)
+Oct 17 20:25:13 symfony [info] {sfWebDebugLogger} Action "patient/index" 8.80 ms (1)
+Oct 17 20:25:13 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 24.29 ms (1)
+Oct 17 20:25:13 symfony [info] {sfWebResponse} Send content (30337 o)
+Oct 17 20:28:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:28:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:28:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:28:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:28:42 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:28:42 symfony [warning] {sfWebDebugLogger}  Warning at C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\action\sfAction.class.php on line 129 (Missing argument 2 for sfAction::forward(), called in C:\dev\source\symfony\paramedical\apps\frontend\modules\patient\actions\actions.class.php on line 34 and defined)
+Oct 17 20:28:42 symfony [notice] {sfWebDebugLogger}  Notice at C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\action\sfAction.class.php on line 133 (Undefined variable: action)
+Oct 17 20:28:42 symfony [info] {patientActions} Forward to action "index/"
+Oct 17 20:28:42 symfony [notice] {sfWebDebugLogger}  Notice at C:\dev\source\symfony\paramedical\lib\vendor\symfony-1.4.2\lib\action\sfAction.class.php on line 136 (Undefined variable: action)
+Oct 17 20:28:42 symfony [info] {sfFrontWebController} Action "index/" does not exist
+Oct 17 20:28:42 symfony [err] {sfError404Exception} Action "index/" does not exist.
+Oct 17 20:28:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Oct 17 20:28:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:28:42 symfony [info] {sfWebDebugLogger} Configuration 19.89 ms (8)
+Oct 17 20:28:42 symfony [info] {sfWebDebugLogger} Factories 72.62 ms (1)
+Oct 17 20:28:42 symfony [info] {sfWebDebugLogger} Action "patient/search" 85.29 ms (1)
+Oct 17 20:28:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:28:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:28:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:28:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:28:58 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:28:58 symfony [info] {patientActions} Forward to action "patient/index"
+Oct 17 20:28:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:28:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:28:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:28:58 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:28:58 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:28:58 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:28:58 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:28:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:28:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:28:58 symfony [info] {sfWebDebugLogger} Configuration 28.27 ms (12)
+Oct 17 20:28:58 symfony [info] {sfWebDebugLogger} Factories 63.46 ms (1)
+Oct 17 20:28:58 symfony [info] {sfWebDebugLogger} Action "patient/search" 47.75 ms (1)
+Oct 17 20:28:58 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.44 ms (1)
+Oct 17 20:28:58 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 26.51 ms (1)
+Oct 17 20:28:58 symfony [info] {sfWebResponse} Send content (32285 o)
+Oct 17 20:31:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:32:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:33:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:33:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:00 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:33:00 symfony [info] {patientActions} Forward to action "patient/index"
+Oct 17 20:33:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:00 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:33:00 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:33:00 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:00 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:33:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:33:00 symfony [info] {sfWebDebugLogger} Configuration 25.21 ms (12)
+Oct 17 20:33:00 symfony [info] {sfWebDebugLogger} Factories 60.20 ms (1)
+Oct 17 20:33:00 symfony [info] {sfWebDebugLogger} Action "patient/search" 47.24 ms (1)
+Oct 17 20:33:00 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.22 ms (1)
+Oct 17 20:33:00 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 26.50 ms (1)
+Oct 17 20:33:00 symfony [info] {sfWebResponse} Send content (32264 o)
+Oct 17 20:33:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:33:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:05 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:33:05 symfony [info] {patientActions} Forward to action "patient/index"
+Oct 17 20:33:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:05 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:33:05 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:33:05 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:05 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:33:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:33:05 symfony [info] {sfWebDebugLogger} Configuration 25.71 ms (12)
+Oct 17 20:33:05 symfony [info] {sfWebDebugLogger} Factories 61.48 ms (1)
+Oct 17 20:33:05 symfony [info] {sfWebDebugLogger} Action "patient/search" 44.09 ms (1)
+Oct 17 20:33:05 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.10 ms (1)
+Oct 17 20:33:05 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 23.42 ms (1)
+Oct 17 20:33:05 symfony [info] {sfWebResponse} Send content (32264 o)
+Oct 17 20:33:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:33:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:15 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:33:15 symfony [info] {patientActions} Forward to action "patient/index"
+Oct 17 20:33:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:15 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:33:15 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:33:15 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:15 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:33:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:33:15 symfony [info] {sfWebDebugLogger} Configuration 25.79 ms (12)
+Oct 17 20:33:15 symfony [info] {sfWebDebugLogger} Factories 59.53 ms (1)
+Oct 17 20:33:15 symfony [info] {sfWebDebugLogger} Action "patient/search" 90.77 ms (1)
+Oct 17 20:33:15 symfony [info] {sfWebDebugLogger} Action "patient/index" 54.68 ms (1)
+Oct 17 20:33:15 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 24.42 ms (1)
+Oct 17 20:33:15 symfony [info] {sfWebResponse} Send content (32282 o)
+Oct 17 20:33:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:33:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:33 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:33:33 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:33:33 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:33 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:33:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:33:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:33:33 symfony [info] {sfWebDebugLogger} Configuration 21.42 ms (9)
+Oct 17 20:33:33 symfony [info] {sfWebDebugLogger} Factories 60.77 ms (1)
+Oct 17 20:33:33 symfony [info] {sfWebDebugLogger} Action "patient/index" 44.69 ms (1)
+Oct 17 20:33:33 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 26.05 ms (1)
+Oct 17 20:33:33 symfony [info] {sfWebResponse} Send content (30072 o)
+Oct 17 20:33:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:33:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:33:39 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:33:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:33:39 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:33:39 symfony [err] {sfRenderException} The template "searchSuccess.php" does not exist or is unreadable in "".
+Oct 17 20:33:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 17 20:33:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:33:39 symfony [info] {sfWebDebugLogger} Configuration 21.32 ms (9)
+Oct 17 20:33:39 symfony [info] {sfWebDebugLogger} Factories 62.24 ms (1)
+Oct 17 20:33:39 symfony [info] {sfWebDebugLogger} Action "patient/search" 0.41 ms (1)
+Oct 17 20:33:39 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 85.98 ms (1)
+Oct 17 20:45:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:45:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:45:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:45:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:45:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:45:44 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:45:44 symfony [info] {patientActions} Forward to action "patient/index"
+Oct 17 20:45:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:45:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:45:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:45:44 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:45:44 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:45:44 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:45:44 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:45:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:45:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:45:44 symfony [info] {sfWebDebugLogger} Configuration 26.91 ms (12)
+Oct 17 20:45:44 symfony [info] {sfWebDebugLogger} Factories 59.38 ms (1)
+Oct 17 20:45:44 symfony [info] {sfWebDebugLogger} Action "patient/search" 51.15 ms (1)
+Oct 17 20:45:44 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.74 ms (1)
+Oct 17 20:45:44 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 29.26 ms (1)
+Oct 17 20:45:45 symfony [info] {sfWebResponse} Send content (32287 o)
+Oct 17 20:46:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:46:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:46:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:46:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:46:00 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:46:00 symfony [err] {sfRenderException} The template "searchSuccess.php" does not exist or is unreadable in "".
+Oct 17 20:46:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Oct 17 20:46:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:46:00 symfony [info] {sfWebDebugLogger} Configuration 18.78 ms (9)
+Oct 17 20:46:00 symfony [info] {sfWebDebugLogger} Factories 83.94 ms (1)
+Oct 17 20:46:00 symfony [info] {sfWebDebugLogger} Action "patient/search" 38.08 ms (1)
+Oct 17 20:46:00 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 86.18 ms (1)
+Oct 17 20:47:35 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:47:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:47:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:47:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:47:35 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:47:35 symfony [info] {patientActions} Forward to action "patient/index"
+Oct 17 20:47:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:47:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:47:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:47:35 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:47:35 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:47:35 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:47:35 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:47:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:47:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:47:35 symfony [info] {sfWebDebugLogger} Configuration 24.03 ms (12)
+Oct 17 20:47:35 symfony [info] {sfWebDebugLogger} Factories 63.26 ms (1)
+Oct 17 20:47:35 symfony [info] {sfWebDebugLogger} Action "patient/search" 51.14 ms (1)
+Oct 17 20:47:35 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.65 ms (1)
+Oct 17 20:47:35 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 29.44 ms (1)
+Oct 17 20:47:35 symfony [info] {sfWebResponse} Send content (32265 o)
+Oct 17 20:47:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:47:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:47:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:47:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:47:44 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:47:44 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:47:44 symfony [notice] {sfWebDebugLogger}  Notice at C:\dev\source\symfony\paramedical\apps\frontend\modules\patient\templates\searchSuccess.php on line 1 (Undefined variable: form)
+Oct 17 20:48:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:48:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:48:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:48:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:48:20 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:48:20 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:48:20 symfony [notice] {sfWebDebugLogger}  Notice at C:\dev\source\symfony\paramedical\apps\frontend\modules\patient\templates\searchSuccess.php on line 1 (Undefined variable: toto)
+Oct 17 20:48:20 symfony [notice] {sfWebDebugLogger}  Notice at C:\dev\source\symfony\paramedical\apps\frontend\modules\patient\templates\searchSuccess.php on line 3 (Undefined variable: form)
+Oct 17 20:48:20 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:48:20 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:48:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:48:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:48:20 symfony [info] {sfWebDebugLogger} Configuration 25.97 ms (9)
+Oct 17 20:48:20 symfony [info] {sfWebDebugLogger} Factories 61.63 ms (1)
+Oct 17 20:48:20 symfony [info] {sfWebDebugLogger} Action "patient/search" 34.35 ms (1)
+Oct 17 20:48:20 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 28.48 ms (1)
+Oct 17 20:48:20 symfony [info] {sfWebResponse} Send content (42246 o)
+Oct 17 20:48:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:48:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:48:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:48:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:48:37 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:48:37 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:48:37 symfony [notice] {sfWebDebugLogger}  Notice at C:\dev\source\symfony\paramedical\apps\frontend\modules\patient\templates\searchSuccess.php on line 1 (Undefined variable: toto)
+Oct 17 20:48:37 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:48:37 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:48:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:48:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:48:37 symfony [info] {sfWebDebugLogger} Configuration 21.19 ms (9)
+Oct 17 20:48:37 symfony [info] {sfWebDebugLogger} Factories 65.88 ms (1)
+Oct 17 20:48:37 symfony [info] {sfWebDebugLogger} Action "patient/search" 35.83 ms (1)
+Oct 17 20:48:37 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 26.99 ms (1)
+Oct 17 20:48:37 symfony [info] {sfWebResponse} Send content (35813 o)
+Oct 17 20:51:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:51:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:51:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:51:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:51:26 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:51:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 17 20:51:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p WHERE (p.firstname LIKE ? OR p.lastname LIKE ?) - (%%, %%)
+Oct 17 20:51:26 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:51:26 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:51:26 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:51:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:51:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:51:26 symfony [info] {sfWebDebugLogger} Configuration 17.99 ms (9)
+Oct 17 20:51:26 symfony [info] {sfWebDebugLogger} Factories 59.44 ms (1)
+Oct 17 20:51:26 symfony [info] {sfWebDebugLogger} Action "patient/search" 77.46 ms (1)
+Oct 17 20:51:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 17 20:51:26 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 28.69 ms (1)
+Oct 17 20:51:26 symfony [info] {sfWebResponse} Send content (33356 o)
+Oct 17 20:51:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:51:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:51:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:51:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:51:38 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:51:38 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:51:38 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:51:38 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:51:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:51:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:51:38 symfony [info] {sfWebDebugLogger} Configuration 17.92 ms (9)
+Oct 17 20:51:38 symfony [info] {sfWebDebugLogger} Factories 79.92 ms (1)
+Oct 17 20:51:38 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.18 ms (1)
+Oct 17 20:51:38 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 29.49 ms (1)
+Oct 17 20:51:38 symfony [info] {sfWebResponse} Send content (30055 o)
+Oct 17 20:51:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:51:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:51:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:51:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:51:46 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:51:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 17 20:51:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p WHERE (p.firstname LIKE ? OR p.lastname LIKE ?) - (%Ma%, %Ma%)
+Oct 17 20:51:46 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:51:46 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:51:46 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:51:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:51:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:51:46 symfony [info] {sfWebDebugLogger} Configuration 22.34 ms (9)
+Oct 17 20:51:46 symfony [info] {sfWebDebugLogger} Factories 68.52 ms (1)
+Oct 17 20:51:46 symfony [info] {sfWebDebugLogger} Action "patient/search" 73.33 ms (1)
+Oct 17 20:51:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 17 20:51:46 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 28.37 ms (1)
+Oct 17 20:51:46 symfony [info] {sfWebResponse} Send content (33343 o)
+Oct 17 20:53:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:53:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:53:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:53:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:53:02 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:53:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 17 20:53:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p WHERE (p.firstname LIKE ? OR p.lastname LIKE ?) - (%Ma%, %Ma%)
+Oct 17 20:53:02 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:53:02 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:53:02 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:53:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:53:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:53:02 symfony [info] {sfWebDebugLogger} Configuration 24.84 ms (9)
+Oct 17 20:53:02 symfony [info] {sfWebDebugLogger} Factories 62.62 ms (1)
+Oct 17 20:53:02 symfony [info] {sfWebDebugLogger} Action "patient/search" 71.21 ms (1)
+Oct 17 20:53:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 17 20:53:02 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 22.33 ms (1)
+Oct 17 20:53:02 symfony [info] {sfWebResponse} Send content (33122 o)
+Oct 17 20:53:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:53:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:53:56 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:53:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:53:56 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:53:56 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:53:56 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:53:56 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:53:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:53:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:53:56 symfony [info] {sfWebDebugLogger} Configuration 24.28 ms (9)
+Oct 17 20:53:56 symfony [info] {sfWebDebugLogger} Factories 60.45 ms (1)
+Oct 17 20:53:56 symfony [info] {sfWebDebugLogger} Action "patient/index" 11.44 ms (1)
+Oct 17 20:53:56 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 31.11 ms (1)
+Oct 17 20:53:56 symfony [info] {sfWebResponse} Send content (30204 o)
+Oct 17 20:53:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:53:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:53:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:53:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:53:59 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:53:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 17 20:53:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p WHERE (p.firstname LIKE ? OR p.lastname LIKE ?) - (%Bou%, %Bou%)
+Oct 17 20:53:59 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:53:59 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:53:59 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:53:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:53:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:53:59 symfony [info] {sfWebDebugLogger} Configuration 16.85 ms (9)
+Oct 17 20:53:59 symfony [info] {sfWebDebugLogger} Factories 59.76 ms (1)
+Oct 17 20:53:59 symfony [info] {sfWebDebugLogger} Action "patient/search" 70.91 ms (1)
+Oct 17 20:53:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 17 20:53:59 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 26.26 ms (1)
+Oct 17 20:54:00 symfony [info] {sfWebResponse} Send content (33274 o)
+Oct 17 20:54:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/index with parameters array (  'module' => 'patient',  'action' => 'index',)
+Oct 17 20:54:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:54:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:54:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:54:06 symfony [info] {patientActions} Call "patientActions->executeIndex()"
+Oct 17 20:54:06 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/indexSuccess.php"
+Oct 17 20:54:06 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:54:06 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:54:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:54:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:54:06 symfony [info] {sfWebDebugLogger} Configuration 20.57 ms (9)
+Oct 17 20:54:06 symfony [info] {sfWebDebugLogger} Factories 64.77 ms (1)
+Oct 17 20:54:06 symfony [info] {sfWebDebugLogger} Action "patient/index" 9.50 ms (1)
+Oct 17 20:54:06 symfony [info] {sfWebDebugLogger} View "Success" for "patient/index" 27.78 ms (1)
+Oct 17 20:54:06 symfony [info] {sfWebResponse} Send content (30203 o)
+Oct 17 20:54:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /patient/search with parameters array (  'module' => 'patient',  'action' => 'search',)
+Oct 17 20:54:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Oct 17 20:54:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Oct 17 20:54:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Oct 17 20:54:15 symfony [info] {patientActions} Call "patientActions->executeSearch()"
+Oct 17 20:54:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Oct 17 20:54:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.firstname AS p__firstname, p.lastname AS p__lastname, p.birthdate AS p__birthdate, p.address AS p__address, p.zip AS p__zip, p.city AS p__city FROM patient p WHERE (p.firstname LIKE ? OR p.lastname LIKE ?) - (%Bou%, %Bou%)
+Oct 17 20:54:15 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\modules/patient/templates/searchSuccess.php"
+Oct 17 20:54:15 symfony [info] {sfPHPView} Decorate content with "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:54:15 symfony [info] {sfPHPView} Render "C:\dev\source\symfony\paramedical\apps\frontend\templates/layout.php"
+Oct 17 20:54:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Oct 17 20:54:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Oct 17 20:54:15 symfony [info] {sfWebDebugLogger} Configuration 21.77 ms (9)
+Oct 17 20:54:15 symfony [info] {sfWebDebugLogger} Factories 62.74 ms (1)
+Oct 17 20:54:15 symfony [info] {sfWebDebugLogger} Action "patient/search" 83.61 ms (1)
+Oct 17 20:54:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (2)
+Oct 17 20:54:15 symfony [info] {sfWebDebugLogger} View "Success" for "patient/search" 19.65 ms (1)
+Oct 17 20:54:15 symfony [info] {sfWebResponse} Send content (33274 o)
