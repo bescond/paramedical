@@ -18,7 +18,7 @@ abstract class BaseEventForm extends BaseFormDoctrine
       'id'            => new sfWidgetFormInputHidden(),
       'date'          => new sfWidgetFormInputText(),
       'title'         => new sfWidgetFormInputText(),
-      'descritpion'   => new sfWidgetFormTextarea(),
+      'description'   => new sfWidgetFormTextarea(),
       'patient_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Patient'), 'add_empty' => false)),
       'consultant_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Consultant'), 'add_empty' => true)),
     ));
@@ -27,7 +27,7 @@ abstract class BaseEventForm extends BaseFormDoctrine
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'date'          => new sfValidatorPass(),
       'title'         => new sfValidatorString(array('max_length' => 255)),
-      'descritpion'   => new sfValidatorString(array('required' => false)),
+      'description'   => new sfValidatorString(array('required' => false)),
       'patient_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Patient'))),
       'consultant_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Consultant'), 'required' => false)),
     ));

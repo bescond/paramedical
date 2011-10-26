@@ -10,7 +10,7 @@ Doctrine_Manager::getInstance()->bindComponent('Event', 'doctrine');
  * @property integer $id
  * @property datetime $date
  * @property string $title
- * @property string $descritpion
+ * @property string $description
  * @property integer $patient_id
  * @property integer $consultant_id
  * @property Patient $Patient
@@ -19,7 +19,7 @@ Doctrine_Manager::getInstance()->bindComponent('Event', 'doctrine');
  * @method integer    getId()            Returns the current record's "id" value
  * @method datetime   getDate()          Returns the current record's "date" value
  * @method string     getTitle()         Returns the current record's "title" value
- * @method string     getDescritpion()   Returns the current record's "descritpion" value
+ * @method string     getDescription()   Returns the current record's "description" value
  * @method integer    getPatientId()     Returns the current record's "patient_id" value
  * @method integer    getConsultantId()  Returns the current record's "consultant_id" value
  * @method Patient    getPatient()       Returns the current record's "Patient" value
@@ -27,7 +27,7 @@ Doctrine_Manager::getInstance()->bindComponent('Event', 'doctrine');
  * @method Event      setId()            Sets the current record's "id" value
  * @method Event      setDate()          Sets the current record's "date" value
  * @method Event      setTitle()         Sets the current record's "title" value
- * @method Event      setDescritpion()   Sets the current record's "descritpion" value
+ * @method Event      setDescription()   Sets the current record's "description" value
  * @method Event      setPatientId()     Sets the current record's "patient_id" value
  * @method Event      setConsultantId()  Sets the current record's "consultant_id" value
  * @method Event      setPatient()       Sets the current record's "Patient" value
@@ -58,7 +58,7 @@ abstract class BaseEvent extends sfDoctrineRecord
              'notnull' => true,
              'length' => 255,
              ));
-        $this->hasColumn('descritpion', 'string', null, array(
+        $this->hasColumn('description', 'string', null, array(
              'type' => 'string',
              'notnull' => false,
              'length' => '',

@@ -12,9 +12,23 @@ homepage:
 #   url:   /:module
 #   param: { action: index }
 # 
-default:
-  url:   /:module/:action/*
+#default:
+#  url:   /:module/:action/*
 
+# Patient module
+patient_list:
+  url: /patient/list
+  param: { module: patient, action: list }
+
+patient_view:
+  url: /patient/:id
+  param: { module: patient, action: view }
+
+search:
+  url:   /search
+  param: { module: patient, action: search }
+
+# Login management
 sf_guard_signin:
   url:   /login
   param: { module: sfGuardAuth, action: signin }

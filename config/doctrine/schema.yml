@@ -60,7 +60,7 @@ Event:
     title:
       type: string(255)
       notnull: true
-    descritpion:
+    description:
       type: string()
       notnull: false
     patient_id:
