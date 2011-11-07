@@ -11,42 +11,6 @@
 class patientActions extends sfActions
 {
  /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->form = new BaseForm();
-    $this->form->setWidgets(array(
-      'search'    => new sfWidgetFormInputText(),
-    ));
-    
-    return sfView::SUCCESS;
-  }
-
- /**
-  * Executes search action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeSearch(sfWebRequest $request)
-  {
-    if ($request->isMethod('post'))
-    {
-      $query = Doctrine_Core::getTable('Patient')
-        ->createQuery()
-        ->where('firstname LIKE ? OR lastname LIKE ?', array('%' . $request->getParameter('search') . '%', '%' . $request->getParameter('search') . '%'))
-        ->execute();
-
-      $this->toto = $query[0]->firstname;
-    } else {
-      $this->forward('patient', 'index');
-    }
-    return sfView::SUCCESS;
-  }
-
- /**
   * Executes view action
   *
   * @param sfRequest $request A request object
@@ -69,6 +33,8 @@ class patientActions extends sfActions
     // Generate Event form
     $this->eventForm = new EventForm();
 
+    $this->initSearchForm();
+
     if (empty($this->patient)) {
       return $this->forward404('This patient does not exists !');
     } else {
@@ -83,11 +49,41 @@ class patientActions extends sfActions
   */
   public function executeList(sfWebRequest $request)
   {
-    $query = Doctrine_Core::getTable('Patient')
-      ->findAll();
+    // Search for a patient...
+    $search = '';
+    if ($request->isMethod('post'))
+    {
+      $search = $request->getParameter('search');
+      $this->list = Doctrine_Core::getTable('Patient')
+        ->createQuery()
+        ->where('firstname LIKE ? OR lastname LIKE ?', array('%' . $search . '%', '%' . $search . '%'))
+        ->execute();
 
-    $this->toto = $query;
+      // Unique record found !!!
+      if (count($this->list) == 1) {
+        $this->redirect('patient/view?id=' . $this->list[0]->id);
+      }
+
+    // List all patients !
+    } else {
+      $this->list = Doctrine_Core::getTable('Patient')
+        ->findAll();
+    }
+
+    $this->initSearchForm($search);
+
     return sfView::SUCCESS;
   }
 
+  /**
+   * Init search form
+   * @param String $default Default search value
+   */
+  private function initSearchForm($default = '') {
+    $this->form = new BaseForm();
+    $this->form->setWidgets(array(
+      'search'    => new sfWidgetFormInputText(),
+    ));
+    $this->form->setDefault('search', $default);
+  }
 }

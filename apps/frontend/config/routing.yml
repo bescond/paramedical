@@ -4,7 +4,7 @@
 # default rules
 homepage:
   url:   /
-  param: { module: patient, action: index }
+  param: { module: patient, action: list }
 
 # generic rules
 # please, remove them by adding more specific rules
@@ -23,10 +23,6 @@ patient_list:
 patient_view:
   url: /patient/:id
   param: { module: patient, action: view }
-
-search:
-  url:   /search
-  param: { module: patient, action: search }
 
 # Login management
 sf_guard_signin:

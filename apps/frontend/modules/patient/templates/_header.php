@@ -1,4 +1,4 @@
-<?php echo $form->renderFormTag('search') ?>
+<?php echo $form->renderFormTag('list') ?>
   <table>
     <?php echo $form ?>
     <tr>
@@ -8,3 +8,5 @@
     </tr>
   </table>
 </form>
+
+This is a page header...<br />

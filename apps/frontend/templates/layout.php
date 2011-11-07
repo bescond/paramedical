@@ -9,6 +9,16 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+    <div id="global">
+      <div id="global_header">
+        <?php include_partial('global/header'); ?>
+      </div>
+      <div id="global_content" class="toto">
+        <?php echo $sf_content ?>
+      </div>
+      <div id="global_footer" class="toto">
+        <?php include_partial('global/footer'); ?>
+      </div>
+    </div>
   </body>
 </html>

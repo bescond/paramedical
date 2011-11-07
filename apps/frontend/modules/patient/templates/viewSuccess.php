@@ -1,3 +1,5 @@
+<?php include_partial('header', array('form' => $form)); ?>
+
 <div class="patient" style="border: 1px solid black; float: left;">
 <h2>Patient</h2>
 View patient: <?php echo $patient->firstname ?> <?php echo $patient->lastname ?>
