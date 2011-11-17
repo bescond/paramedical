@@ -1,12 +1,8 @@
-<?php echo $form->renderFormTag('list') ?>
-  <table>
-    <?php echo $form ?>
-    <tr>
-      <td colspan="2">
-        <input type="submit" />
-      </td>
-    </tr>
+<div id="header">
+<form method="post" action="<?php echo url_for('@patient_list'); ?>" class="search" >
+    <label for="search">Search</label>
+    <input type="text" name="search" id="search" value="<?php echo $defaultSearch ?>"/>
+    <input type="submit" />
   </table>
 </form>
-
-This is a page header...<br />
+</div>

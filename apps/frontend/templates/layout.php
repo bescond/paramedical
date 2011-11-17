@@ -13,10 +13,10 @@
       <div id="global_header">
         <?php include_partial('global/header'); ?>
       </div>
-      <div id="global_content" class="toto">
+      <div id="global_content">
         <?php echo $sf_content ?>
       </div>
-      <div id="global_footer" class="toto">
+      <div id="global_footer">
         <?php include_partial('global/footer'); ?>
       </div>
     </div>

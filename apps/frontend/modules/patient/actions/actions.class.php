@@ -34,6 +34,7 @@ class patientActions extends sfActions
     $this->eventForm = new EventForm();
 
     $this->initSearchForm();
+    $request->setParameter('toto', 'Mathieu rules !!');
 
     if (empty($this->patient)) {
       return $this->forward404('This patient does not exists !');
@@ -80,10 +81,6 @@ class patientActions extends sfActions
    * @param String $default Default search value
    */
   private function initSearchForm($default = '') {
-    $this->form = new BaseForm();
-    $this->form->setWidgets(array(
-      'search'    => new sfWidgetFormInputText(),
-    ));
-    $this->form->setDefault('search', $default);
+    $this->defaultSearch = $default;
   }
 }

@@ -1,7 +1,32 @@
 <ul id="menu">
-<li><?php echo link_to('Patient', '@patient_list'); ?></li>
-<li><?php echo link_to('Calendar', '@patient_list'); ?></li>
+<?php
+
+foreach (array(
+	'Patient' => '@patient_list',
+	'Calendar' => '@calendar_view',
+) as $module => $route) {
+	$options = array();
+	if (strtolower($module) == $sf_context->getModuleName()) {
+		$options = array('class' => 'current');
+	}
+?>
+<li><?php echo link_to($module, $route, $options); ?></li>
+<?php	
+}
+
+?>
 <?php if ($sf_user->isAuthenticated()) { ?>
 <li><?php echo link_to('Logout', '@sf_guard_signout'); ?></li>
 <?php } ?>
 </ul>
+
+<div class="user">
+You are 
+<?php if ($sf_user->isAuthenticated()) { ?>
+<?php echo $sf_user->getGuardUser()->getName(); ?>
+<?php } else { ?>
+not connected !
+<?php } ?>
+</div>
+
+<div class="spacer">&nbsp;</div>
