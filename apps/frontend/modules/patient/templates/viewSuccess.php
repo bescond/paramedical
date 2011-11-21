@@ -1,7 +1,7 @@
 <?php include_partial('header', array('defaultSearch' => $defaultSearch)); ?>
 
-<div class="patient" style="border: 1px solid black; float: left;">
-<h2>Patient</h2>
+<div class="patient">
+<h3>Patient</h3>
 View patient: <?php echo $patient->firstname ?> <?php echo $patient->lastname ?>
 </div>
 
