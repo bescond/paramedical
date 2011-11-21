@@ -43,8 +43,9 @@ all:
 
     secure_module:          sfGuardAuth
     secure_action:          secure
+    #default_culture: fr_FR
 
 i18n: on
 standard_helpers: [Partial, Cache, Form, Text, I18N, Date]
-default_culture: fr_FR
+
 

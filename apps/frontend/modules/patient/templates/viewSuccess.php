@@ -1,3 +1,5 @@
+<?php include_stylesheets_for_form($eventForm) ?>
+<?php include_javascripts_for_form($eventForm) ?>
 <?php include_partial('header', array('defaultSearch' => $defaultSearch)); ?>
 
 <div class="patient">
@@ -9,7 +11,7 @@ View patient: <?php echo $patient->firstname ?> <?php echo $patient->lastname ?>
 <h2>Events</h2>
 
 <div class="event">
-<?php echo $eventForm->renderFormTag('create/SD lh') ?>
+<?php echo $eventForm->renderFormTag(url_for('@patient_event_create?id=' . $patient->id)) ?>
   <table>
     <?php echo $eventForm ?>
     <tr>

@@ -24,6 +24,10 @@ patient_view:
   url: /patient/:id
   param: { module: patient, action: view }
 
+patient_event_create:
+  url: /patient/:id/event/create
+  param: { module: patient, action: eventCreate }
+
 calendar_view:
   url: /calendar
   param: { module: calendar, action: index }

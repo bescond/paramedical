@@ -31,11 +31,12 @@ class patientActions extends sfActions
       ->execute();
 
     // Generate Event form
-    $this->eventForm = new EventForm();
+    if (empty($this->eventForm)) {
+      $this->eventForm = new EventForm();
+    }
 
     $this->initSearchForm();
-    $request->setParameter('toto', 'Mathieu rules !!');
-
+    
     if (empty($this->patient)) {
       return $this->forward404('This patient does not exists !');
     } else {
@@ -76,6 +77,42 @@ class patientActions extends sfActions
     return sfView::SUCCESS;
   }
 
+ /**
+  * Executes event create action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeEventCreate(sfWebRequest $request)
+  {
+    // Request parameters
+    $id = $request->getParameter('id');
+    
+    // Create an event
+    $eventForm = new EventForm();
+    $eventForm->bind($request->getParameter($eventForm->getName()), $request->getFiles($eventForm->getName()));
+    
+    if ($eventForm->isValid()) {
+      $eventForm->save();
+      $this->redirect('@patient_view?id=' . $id);
+
+    } else {
+      $this->eventForm = $eventForm;
+      $this->setTemplate('view');
+      //$this->forward($request);
+      $this->executeView($request);
+      //$this->forward404();
+    }
+
+    /*$eventForm = new EventForm();
+    $this->processForm($request, $eventForm);
+
+    $event = new Event();
+    $event->patient_id = $id;
+    $event->date = $eventForm->date;
+    $event->save*/
+
+    
+  }
   /**
    * Init search form
    * @param String $default Default search value

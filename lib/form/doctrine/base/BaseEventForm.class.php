@@ -16,12 +16,13 @@ abstract class BaseEventForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'            => new sfWidgetFormInputHidden(),
-      'date'          => new sfWidgetFormInputText(),
+      'date'          => new sfWidgetFormDateJQueryUI(array('change_month' => true, 'change_year' => true, 'culture' => 'fr')),
       'title'         => new sfWidgetFormInputText(),
       'description'   => new sfWidgetFormTextarea(),
       'patient_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Patient'), 'add_empty' => false)),
       'consultant_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Consultant'), 'add_empty' => true)),
     ));
+    $this->setDefault('date', date('d/m/Y'));
 
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
