@@ -3,7 +3,8 @@ body,
 	margin: 0; 
 	padding: 0;
 	font: 11pt "Arial", Verdana, sans-serif;
-	background: white;
+	/* background: white; */
+	background: #F0F0F0;
 }
 
 a, a:visited {
@@ -13,6 +14,13 @@ a, a:visited {
 a:hover, a:visited:hover, a:active {
 	color: red;
 }
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0.5em;
+	color: #DB4A38;
+}
+
 
 #global_header {
 	background: #202020;
@@ -68,6 +76,8 @@ a:hover, a:visited:hover, a:active {
 	padding: 1em 1em 0 0;
 	font-size: x-small;
 	text-align: right;
+	border-top: 1px solid #E0E0E0;
+	background: #F0F0F0;
 }
 
 #header {
@@ -78,14 +88,92 @@ a:hover, a:visited:hover, a:active {
 
 #global_content {
 	clear: both;
+	background: white;
 }
 
 #global_content div.patient {
 	float: left;
-	margin-top: 5px;
-	margin-left: 5px;
+	width: 390px;
+	padding: 5px;
 }
 
-#global_content div.patient h3 {
-	color: #DB4A38;
+#global_content div.events {
+	border-left: 1px solid #E0E0E0;
+	padding: 5px;
+	margin-left: 400px;
 }
+
+
+
+
+#global_content div.event {
+	position: relative;
+	padding: 0 0 0 50px;
+	min-height: 30px;
+}
+
+#global_content div.event h3.title {
+	padding: 0;
+}
+
+#global_content div.event a {
+	display: block;
+	text-decoration: none;
+	font-size: 0.8em;
+}
+
+#global_content div.event span.date {
+}
+
+#global_content div.event span.date span.day {
+	position: absolute;
+	top: 0; left: 0;
+}
+
+#global_content div.event span.date span.year {
+	position: absolute;
+	top: 10px; left: 0;
+}
+
+#global_content div.event span.consultant {
+	padding: 0;
+}
+
+#global_content div.event div.description {
+	padding: 0; 
+}
+
+#global_content form.event {
+	padding: 0 0 0 50px;
+	min-height: 30px;
+}
+
+#global_content form.event div.field {
+	padding: 0 0 4px;
+}
+
+#global_content form.event label {
+	padding: 0 0 0 4px;
+	position: absolute;
+	z-index: 1;
+	color: #E0E0E0;
+}
+
+#global_content form.event input, 
+#global_content form.event select,
+#global_content form.event textarea {
+	position: relative;
+	z-index: 2;
+	background: none;
+	border: 1px solid #E0E0E0;
+	width: 200px;
+}
+
+#global_content form.event input:focus, 
+#global_content form.event input[value=toto], 
+#global_content form.event select:focus,
+#global_content form.event textarea:focus {
+	background: white;
+	border-color: gray;
+}
+
