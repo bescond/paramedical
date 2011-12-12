@@ -3,7 +3,6 @@ body,
 	margin: 0; 
 	padding: 0;
 	font: 11pt "Arial", Verdana, sans-serif;
-	/* background: white; */
 	background: #F0F0F0;
 }
 
@@ -103,44 +102,103 @@ h1, h2, h3 {
 	margin-left: 400px;
 }
 
-
-
-
 #global_content div.event {
 	position: relative;
-	padding: 0 0 0 50px;
-	min-height: 30px;
+	min-height: 85px;
 }
 
-#global_content div.event h3.title {
-	padding: 0;
+#global_content div.event article {
+	margin: 5px 0 0 0;
+	border-radius: 5px;
 }
 
-#global_content div.event a {
+#global_content div.event article header {
+	position: absolute;
+	background: #DB4A38;
+	border-top-left-radius: 5px;
+	color: white;
+	height: 40px;
+}
+
+#global_content div.event article header h1 {
+	position: absolute;
+	width: 787px;
+	height: 24px;
+	top: 0; left: 50px;
+	font-size: 1em;
+	font-weight: bold;
+	color: black;
+	background: #F0F0F0;
+	border-top: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
+	border-top-right-radius: 5px;
+}
+
+#global_content div.event article header div.date {
+	width: 50px;
+}
+
+#global_content div.event article header div.year {
+	font-size: 1em;
+	text-align: center;
+	line-height: 16px;
+	margin: 12px 0 0 -22px;
 	display: block;
-	text-decoration: none;
+	transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+}
+
+#global_content div.event article div.date div.day {
 	font-size: 0.8em;
+	font-weight: bold;
+	float: right;
+	margin: -25px 5px 0 25px;
+	text-align: center;
 }
 
-#global_content div.event span.date {
+#global_content div.event article div.date div.day span {
+	display: block;
+	text-align: center;
 }
 
-#global_content div.event span.date span.day {
+#global_content div.event article p {
+	display: block;
 	position: absolute;
-	top: 0; left: 0;
+	width: 850px;
+	top: 29px;
+	font-size: 0.8em;
+	border-right: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
 }
 
-#global_content div.event span.date span.year {
+#global_content div.event article footer {
+	display: block;
+	float: right;
 	position: absolute;
-	top: 10px; left: 0;
+	width: 850px;
+	top: 55px;
+	font-style: italic;
+	font-size: 0.8em;
+	border-bottom: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
-#global_content div.event span.consultant {
+#global_content div.event article footer a {
+	display: block;
+	float: right;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#global_content div.event span.consultant,
+#global_content div.event div.description  {
 	padding: 0;
-}
-
-#global_content div.event div.description {
-	padding: 0; 
 }
 
 #global_content form.event {
@@ -149,11 +207,40 @@ h1, h2, h3 {
 }
 
 #global_content form.event div.field {
+	margin: 0 0 0 -50px;
+}
+
+#global_content form.event label {
+	padding: 3px 0 0 4px;
+	position: absolute;
+	z-index: 1;
+	color: #E0E0E0;
+}
+
+#global_content form.event input, 
+#global_content form.event select {
+	z-index: 2;	
+}
+
+#global_content form.event textarea {
+	z-index: 2;
+	width: 500px;
+	height: 100px;
+}
+
+#global_content form.event input:focus, 
+#global_content form.event select:focus,
+#global_content form.event textarea:focus {
+	background: white;
+	border-color: gray;
+}
+
+/*#global_content form.event div.field {
 	padding: 0 0 4px;
 }
 
 #global_content form.event label {
-	padding: 0 0 0 4px;
+	padding: 3px 0 0 4px;
 	position: absolute;
 	z-index: 1;
 	color: #E0E0E0;
@@ -169,11 +256,14 @@ h1, h2, h3 {
 	width: 200px;
 }
 
+#global_content form.event textarea {
+	width: 500px;
+	height: 100px;
+}
+
 #global_content form.event input:focus, 
-#global_content form.event input[value=toto], 
 #global_content form.event select:focus,
 #global_content form.event textarea:focus {
 	background: white;
 	border-color: gray;
-}
-
+}*/
