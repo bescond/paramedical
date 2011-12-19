@@ -12,5 +12,8 @@ class EventForm extends BaseEventForm
 {
   public function configure()
   {
+  	foreach($this as $formField) {
+  		$formField->getWidget()->setAttributes(array('class' => $formField->getName()));
+  	} 
   }
 }

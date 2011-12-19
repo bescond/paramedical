@@ -12,5 +12,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfFormExtraPlugin');
     $this->enablePlugins('sfJQueryUIPlugin');
     $this->enablePlugins('sfJqueryReloadedPlugin');
+
+    sfWidgetFormSchema::setDefaultFormFormatterName('paramedical');
   }
 }

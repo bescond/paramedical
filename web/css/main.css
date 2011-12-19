@@ -20,6 +20,15 @@ h1, h2, h3 {
 	color: #DB4A38;
 }
 
+input, select, textarea {
+	font-family: "Arial", Verdana, sans-serif;
+	border: 1px solid gray;
+	border-radius: 3px;
+}
+
+input:focus, select:focus, textarea:focus {
+	border: 1px solid black;
+}
 
 #global_header {
 	background: #202020;
@@ -80,9 +89,9 @@ h1, h2, h3 {
 }
 
 #header {
+	padding: 10px;
 	border-bottom: 1px solid #E0E0E0;
 	background: #F0F0F0;
-	padding: 10px;
 }
 
 #global_content {
@@ -92,19 +101,135 @@ h1, h2, h3 {
 
 #global_content div.patient {
 	float: left;
-	width: 390px;
+	width: 250px;
 	padding: 5px;
 }
 
 #global_content div.events {
+	padding: 10px;
+	margin-left: 260px;
 	border-left: 1px solid #E0E0E0;
+}
+
+#global_content div.events div.panel {
 	padding: 5px;
-	margin-left: 400px;
+	background: #F0F0F0;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
 }
 
 #global_content div.event {
 	position: relative;
-	min-height: 85px;
+}
+
+#global_content div.event article {
+	margin: 5px 0 0 0;
+	padding: 5px;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
+}
+
+#global_content div.event article header {
+	/*color: white;*/
+}
+
+#global_content div.event article header div.date {
+	position: absolute;
+	width: 50px;
+}
+
+#global_content div.event article header div.date div.year {
+	height: 15px;
+	display: block;
+	text-align: center;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: white;
+	background: #DB4A38;
+	border-top-left-radius: 5px;
+}
+
+#global_content div.event article header div.date div.day {
+	height: 23px;
+	background: white;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: center;
+	border: 1px solid #E0E0E0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#global_content div.event article header div.title {
+	margin: 0 0 0 55px;
+	padding: 0;
+	height: 40px;
+	font-size: 1em;
+	font-weight: bold;
+	color: black;
+}
+
+#global_content div.event article header div.title h1 {
+	padding: 0;
+	font-size: 1em;
+	font-weight: bold;
+	color: black;
+}
+
+#global_content div.event article header div.title div.consultant {
+	font-size: 0.8em;
+	color: #535353;
+}
+
+#global_content div.event article p {
+	display: block;
+	font-size: 0.8em;
+	color: #535353;
+}
+
+#global_content div.event article footer {
+	display: block;
+	font-size: 0.8em;
+	font-weight: bold;
+	border-top: 1px solid #E0E0E0;
+}
+
+#global_content div.event article footer a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#global_content form.event div.field.error input, 
+#global_content form.event div.field.error textarea,
+#global_content form.event div.field.error select {
+	border: 1px solid red;
+	background: #F2AEAE;
+}
+
+.error {
+	color: red;
+}
+
+#global_content div.patient div.panel {
+	margin: 5px;
+	padding: 5px;
+	height: 350px;
+	background: #F0F0F0;
+	border: 1px solid #E0E0E0;
+	border-radius: 5px;
+}
+
+#global_content div.patient div.panel div.firstname,
+#global_content div.patient div.panel div.lastname,
+#global_content div.patient div.panel div.birthdate,
+#global_content div.patient div.panel div.address,
+#global_content div.patient div.panel div.zip,
+#global_content div.patient div.panel div.city {
+	font-weight: bold;
+}
+
+/*#global_content div.event {
+	position: relative;
 }
 
 #global_content div.event article {
@@ -113,18 +238,14 @@ h1, h2, h3 {
 }
 
 #global_content div.event article header {
-	position: absolute;
-	background: #DB4A38;
-	border-top-left-radius: 5px;
 	color: white;
-	height: 40px;
 }
 
 #global_content div.event article header h1 {
-	position: absolute;
-	width: 787px;
-	height: 24px;
-	top: 0; left: 50px;
+	margin: 0 0 0 52px;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
 	font-size: 1em;
 	font-weight: bold;
 	color: black;
@@ -136,15 +257,20 @@ h1, h2, h3 {
 }
 
 #global_content div.event article header div.date {
+	position: absolute;
 	width: 50px;
+	height: 40px;
+	background: #DB4A38;
+	border-top-left-radius: 5px;
+	border: 1px solid #DB4A38;
 }
 
 #global_content div.event article header div.year {
+	display: block;
+	margin: 12px 0 0 -22px;
+	line-height: 16px;
 	font-size: 1em;
 	text-align: center;
-	line-height: 16px;
-	margin: 12px 0 0 -22px;
-	display: block;
 	transform: rotate(270deg);
 	-o-transform: rotate(270deg);
 	-moz-transform: rotate(270deg);
@@ -152,10 +278,10 @@ h1, h2, h3 {
 }
 
 #global_content div.event article div.date div.day {
-	font-size: 0.8em;
-	font-weight: bold;
 	float: right;
 	margin: -25px 5px 0 25px;
+	font-size: 0.8em;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -166,9 +292,7 @@ h1, h2, h3 {
 
 #global_content div.event article p {
 	display: block;
-	position: absolute;
-	width: 850px;
-	top: 29px;
+	margin: 0;
 	font-size: 0.8em;
 	border-right: 1px solid #E0E0E0;
 	border-left: 1px solid #E0E0E0;
@@ -176,12 +300,9 @@ h1, h2, h3 {
 
 #global_content div.event article footer {
 	display: block;
-	float: right;
-	position: absolute;
-	width: 850px;
-	top: 55px;
 	font-style: italic;
 	font-size: 0.8em;
+	background: #F0F0F0;
 	border-bottom: 1px solid #E0E0E0;
 	border-right: 1px solid #E0E0E0;
 	border-left: 1px solid #E0E0E0;
@@ -190,7 +311,6 @@ h1, h2, h3 {
 }
 
 #global_content div.event article footer a {
-	display: block;
 	float: right;
 	font-style: normal;
 	text-decoration: none;
@@ -202,63 +322,49 @@ h1, h2, h3 {
 }
 
 #global_content form.event {
-	padding: 0 0 0 50px;
 	min-height: 30px;
 }
 
 #global_content form.event div.field {
-	margin: 0 0 0 -50px;
+	position: relative;
+}
+
+#global_content form.event div.field.error input, 
+#global_content form.event div.field.error textarea,
+#global_content form.event div.field.error select {
+	border: 1px solid red;
+	background: #F2AEAE;
+}
+
+#global_content form.event div.field .date {
+	float: left;
+	width: 150px;
+}
+
+#global_content form.event div.field .title {
+	width: 50%;
 }
 
 #global_content form.event label {
 	padding: 3px 0 0 4px;
 	position: absolute;
+	top: 0; left: 0;
 	z-index: 1;
 	color: #E0E0E0;
 }
 
 #global_content form.event input, 
 #global_content form.event select {
-	z-index: 2;	
-}
-
-#global_content form.event textarea {
+	position: relative;
 	z-index: 2;
-	width: 500px;
-	height: 100px;
+	background: transparent;
 }
 
-#global_content form.event input:focus, 
-#global_content form.event select:focus,
-#global_content form.event textarea:focus {
-	background: white;
-	border-color: gray;
-}
-
-/*#global_content form.event div.field {
-	padding: 0 0 4px;
-}
-
-#global_content form.event label {
-	padding: 3px 0 0 4px;
-	position: absolute;
-	z-index: 1;
-	color: #E0E0E0;
-}
-
-#global_content form.event input, 
-#global_content form.event select,
 #global_content form.event textarea {
 	position: relative;
 	z-index: 2;
-	background: none;
-	border: 1px solid #E0E0E0;
-	width: 200px;
-}
-
-#global_content form.event textarea {
-	width: 500px;
-	height: 100px;
+	background: transparent;
+	width: 90%;
 }
 
 #global_content form.event input:focus, 
@@ -266,4 +372,6 @@ h1, h2, h3 {
 #global_content form.event textarea:focus {
 	background: white;
 	border-color: gray;
-}*/
+}
+*/
+
