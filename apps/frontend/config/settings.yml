@@ -45,7 +45,14 @@ all:
     secure_action:          secure
     #default_culture: fr_FR
 
-i18n: on
-standard_helpers: [Partial, Cache, Form, Text, I18N, Date]
+    # Standard Helprs
+    standard_helpers: 
+      - Partial
+      - Cache
+      - Text
+      - I18N
+      - Date
+      - jQuery
 
-
+    # I18N
+    i18n: on

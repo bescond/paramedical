@@ -21,18 +21,23 @@ class patientActions extends sfActions
     $id = $request->getParameter('id');
 
     // Get Patient
-    $this->patient = Doctrine_Core::getTable('Patient')
-      ->find(array($id));
+    $this->patient = Doctrine_Core::getTable('Patient')->findOneById($id);
+
+    // Generate Patient Form
+    if(empty($this->patientForm)) {
+      $this->patientForm = new PatientForm();
+    }
 
     // Get Events
     $this->events = Doctrine_Core::getTable('Event')
       ->createQuery()
       ->where('patient_id = ?', array($id))
+      ->orderBy('date DESC')
       ->execute();
 
     // Generate Event form
     if (empty($this->eventForm)) {
-      $this->eventForm = new EventForm();
+      $this->eventForm = new EventForm(array(), array('patient' => $this->patient));
     }
 
     $this->initSearchForm();
@@ -53,9 +58,10 @@ class patientActions extends sfActions
   {
     // Search for a patient...
     $search = '';
-    if ($request->isMethod('post'))
-    {
+
+    if ($request->isMethod('post')) {
       $search = $request->getParameter('search');
+      
       $this->list = Doctrine_Core::getTable('Patient')
         ->createQuery()
         ->where('firstname LIKE ? OR lastname LIKE ?', array('%' . $search . '%', '%' . $search . '%'))
@@ -63,13 +69,12 @@ class patientActions extends sfActions
 
       // Unique record found !!!
       if (count($this->list) == 1) {
-        $this->redirect('patient/view?id=' . $this->list[0]->id);
+        $this->redirect('@patient_view?id=' . $this->list[0]->id);
       }
 
     // List all patients !
     } else {
-      $this->list = Doctrine_Core::getTable('Patient')
-        ->findAll();
+      $this->list = Doctrine_Core::getTable('Patient')->findAll();
     }
 
     $this->initSearchForm($search);
@@ -84,40 +89,31 @@ class patientActions extends sfActions
   */
   public function executeEventCreate(sfWebRequest $request)
   {
+    
     // Request parameters
     $id = $request->getParameter('id');
-    
+    $this->patient = Doctrine_Core::getTable('Patient')->findOneById($id);
+
     // Create an event
-    $eventForm = new EventForm();
+    $eventForm = new EventForm(array(), array('patient' => $this->patient));
     $eventForm->bind($request->getParameter($eventForm->getName()), $request->getFiles($eventForm->getName()));
     
     if ($eventForm->isValid()) {
       $eventForm->save();
       $this->redirect('@patient_view?id=' . $id);
-
     } else {
       $this->eventForm = $eventForm;
       $this->setTemplate('view');
-      //$this->forward($request);
       $this->executeView($request);
-      //$this->forward404();
     }
-
-    /*$eventForm = new EventForm();
-    $this->processForm($request, $eventForm);
-
-    $event = new Event();
-    $event->patient_id = $id;
-    $event->date = $eventForm->date;
-    $event->save*/
-
-    
   }
+
   /**
    * Init search form
    * @param String $default Default search value
    */
-  private function initSearchForm($default = '') {
+  private function initSearchForm($default = '')
+  {
     $this->defaultSearch = $default;
   }
 }

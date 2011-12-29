@@ -18,7 +18,7 @@ abstract class BasePatientForm extends BaseFormDoctrine
       'id'        => new sfWidgetFormInputHidden(),
       'firstname' => new sfWidgetFormInputText(),
       'lastname'  => new sfWidgetFormInputText(),
-      'birthdate' => new sfWidgetFormDate(),
+      'birthdate' => new sfWidgetFormJQueryDate(array('config' => '{}', 'date_widget' => new sfWidgetFormDate(array('format'=>'%day%%month%%year%')))),
       'address'   => new sfWidgetFormTextarea(),
       'zip'       => new sfWidgetFormInputText(),
       'city'      => new sfWidgetFormInputText(),

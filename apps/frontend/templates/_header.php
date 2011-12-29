@@ -3,7 +3,7 @@
 
 foreach (array(
 	'Patient' => '@patient_list',
-	'Calendar' => '@calendar_view',
+	'Calendar' => '@calendar_view?year='.date('Y').'&month='.date('m').'&day='.date('d'),
 ) as $module => $route) {
 	$options = array();
 	if (strtolower($module) == $sf_context->getModuleName()) {

@@ -12,5 +12,10 @@ abstract class BaseFormDoctrine extends sfFormDoctrine
 {
   public function setup()
   {
-  }
+   	// style for input error filed
+  	foreach($this as $formField) {
+  		$formField->getWidget()->setAttributes(array('class' => $formField->getName()));
+  	}
+
+ }
 }

@@ -1,41 +1,26 @@
-<?php include_stylesheets_for_form($eventForm) ?>
-<?php include_javascripts_for_form($eventForm) ?>
 <?php include_partial('header', array('defaultSearch' => $defaultSearch)); ?>
 
 <!-- Patient -->
+<h2>Patient</h2>
 <div class="patient">
-	<h2>Patient</h2>
 	<div class="panel">
-		<div class="firstname">
-			<div class="">First Name</div>
-			<?php echo $patient->firstname ?>
-		</div>
-		<div class="lastname">
-			<div class="">Last Name</div>
-			<?php echo $patient->lastname ?>
-		</div>
-		<div class="birthdate">
-			<div class="">Birthdate</div>
-			<?php echo $patient->birthdate ?>
-		</div>
-		<div class="address">
-			<div class="">Address</div>
-			<?php echo $patient->address ?>
-		</div>
-		<div class="zip">
-			<div class="">ZIP</div>
-			<?php echo $patient->zip ?>
-		</div>
-		<div class="city">
-			<div class="">City</div>
-			<?php echo $patient->city ?>
-		</div>
+		<label for="firstname">First Name</label>
+		<div class="firstname"><?php echo $patient->firstname ?></div>
+		<label for="lastname">Last Name</label>
+		<div class="lastname"><?php echo $patient->lastname ?></div>
+		<label for="birthdate">Birthdate</label>
+		<div class="birthdate"><?php echo date('d-M-Y', strtotime($patient->birthdate)) ?></div>
+		<label for="address">Address</label>
+		<div class="address"><?php echo $patient->address ?></div>
+		<label for="zip">ZIP</label>
+		<div class="zip"><?php echo $patient->zip ?></div>
+		<label for="city">City</label>
+		<div class="city"><?php echo $patient->city ?></div>
 	</div>
 </div>
 
 <!-- Events -->
 <div class="events">
-	<h2>Events</h2>
 
 <div class="panel">
 <form method="post" action="<?php echo url_for('@patient_event_create?id=' . $patient->id); ?>" class="event">
@@ -43,7 +28,7 @@
     <?php echo $eventForm ?>
     <tr>
       <td colspan="2">
-        <input type="submit" />
+        <input type="submit" class="button" />
       </td>
     </tr>
   </table>
@@ -66,7 +51,9 @@
 					<?php echo $event->title ?>
 				</h1>
 				<div class="consultant">
-					Consulted by <?php echo $event->consultant_id ?>
+					<?php if(!empty($event->consultant_id)) { ?>
+						Consulted by <?php echo $event->getConsultant()->getFirstname().' '.$event->getConsultant()->getLastname() ?>
+					<?php } ?>
 				</div>
 			</div>
 		</header>

@@ -2,7 +2,7 @@ body,
 #global {
 	margin: 0; 
 	padding: 0;
-	font: 11pt "Arial", Verdana, sans-serif;
+	font: 10pt "Arial", Verdana, sans-serif;
 	background: #F0F0F0;
 }
 
@@ -18,6 +18,7 @@ h1, h2, h3 {
 	margin: 0;
 	padding: 0.5em;
 	color: #DB4A38;
+	border-bottom: 1px solid #E0E0E0;
 }
 
 input, select, textarea {
@@ -28,6 +29,22 @@ input, select, textarea {
 
 input:focus, select:focus, textarea:focus {
 	border: 1px solid black;
+}
+
+.button {
+	background: #F0F0F0;
+	color: #535353;
+	font-weight: bold;
+	border: 1px solid gray;
+	border-radius: 3px;	
+}
+
+.button:hover {
+	border-style: outset;
+}
+
+.error {
+	color: red;
 }
 
 #global_header {
@@ -94,6 +111,18 @@ input:focus, select:focus, textarea:focus {
 	background: #F0F0F0;
 }
 
+#header .search input:focus {
+	border: 1px solid #4C8EFB;
+}
+
+#header .search .button {
+	background: #4C8EFB;
+	color: white;
+	font-weight: normal;
+	border: 1px solid #3079ED;
+	border-radius: 3px;
+}
+
 #global_content {
 	clear: both;
 	background: white;
@@ -101,21 +130,50 @@ input:focus, select:focus, textarea:focus {
 
 #global_content div.patient {
 	float: left;
-	width: 250px;
+	width: 200px;
+}
+
+#global_content div.patient div.panel {
+	margin: 0px 5px 5px 5px;
 	padding: 5px;
 }
 
+#global_content div.patient div.panel label {
+	color: #777777;
+}
+
+#global_content div.patient div.panel div {
+	padding: 0 0 5px 0;
+}
+
 #global_content div.events {
-	padding: 10px;
-	margin-left: 260px;
-	border-left: 1px solid #E0E0E0;
+	margin-left: 210px;
 }
 
 #global_content div.events div.panel {
 	padding: 5px;
 	background: #F0F0F0;
-	border: 1px solid #E0E0E0;
-	border-radius: 5px;
+	border-bottom: 1px solid #E0E0E0;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+}
+
+#global_content div.events div.panel label {
+	position: absolute;
+	margin: 3px 0 0 3px;
+	color: gray;
+	z-index: -1;
+}
+
+#global_content div.events div.panel input,
+#global_content div.events div.panel textarea,
+#global_content div.events div.panel select {
+	position: relative;
+	z-index: 0;
+}
+
+#global_content div.events div.panel textarea {
+	width: 60%;
 }
 
 #global_content div.event {
@@ -127,10 +185,6 @@ input:focus, select:focus, textarea:focus {
 	padding: 5px;
 	border: 1px solid #E0E0E0;
 	border-radius: 5px;
-}
-
-#global_content div.event article header {
-	/*color: white;*/
 }
 
 #global_content div.event article header div.date {
@@ -164,21 +218,20 @@ input:focus, select:focus, textarea:focus {
 	margin: 0 0 0 55px;
 	padding: 0;
 	height: 40px;
-	font-size: 1em;
-	font-weight: bold;
 	color: black;
 }
 
 #global_content div.event article header div.title h1 {
 	padding: 0;
-	font-size: 1em;
-	font-weight: bold;
 	color: black;
+	font-size: 0.9em;
+	font-weight: normal;
+	border: 0px;
 }
 
 #global_content div.event article header div.title div.consultant {
 	font-size: 0.8em;
-	color: #535353;
+	color: #777777;
 }
 
 #global_content div.event article p {
@@ -190,188 +243,17 @@ input:focus, select:focus, textarea:focus {
 #global_content div.event article footer {
 	display: block;
 	font-size: 0.8em;
-	font-weight: bold;
 	border-top: 1px solid #E0E0E0;
 }
 
 #global_content div.event article footer a {
-	font-weight: bold;
+	color: #7796CC;
 	text-decoration: none;
 }
 
-#global_content form.event div.field.error input, 
-#global_content form.event div.field.error textarea,
-#global_content form.event div.field.error select {
+#global_content div.field.error input, 
+#global_content div.field.error textarea,
+#global_content div.field.error select {
 	border: 1px solid red;
 	background: #F2AEAE;
 }
-
-.error {
-	color: red;
-}
-
-#global_content div.patient div.panel {
-	margin: 5px;
-	padding: 5px;
-	height: 350px;
-	background: #F0F0F0;
-	border: 1px solid #E0E0E0;
-	border-radius: 5px;
-}
-
-#global_content div.patient div.panel div.firstname,
-#global_content div.patient div.panel div.lastname,
-#global_content div.patient div.panel div.birthdate,
-#global_content div.patient div.panel div.address,
-#global_content div.patient div.panel div.zip,
-#global_content div.patient div.panel div.city {
-	font-weight: bold;
-}
-
-/*#global_content div.event {
-	position: relative;
-}
-
-#global_content div.event article {
-	margin: 5px 0 0 0;
-	border-radius: 5px;
-}
-
-#global_content div.event article header {
-	color: white;
-}
-
-#global_content div.event article header h1 {
-	margin: 0 0 0 52px;
-	padding: 0;
-	height: 40px;
-	overflow: hidden;
-	font-size: 1em;
-	font-weight: bold;
-	color: black;
-	background: #F0F0F0;
-	border-top: 1px solid #E0E0E0;
-	border-right: 1px solid #E0E0E0;
-	border-bottom: 1px solid #E0E0E0;
-	border-top-right-radius: 5px;
-}
-
-#global_content div.event article header div.date {
-	position: absolute;
-	width: 50px;
-	height: 40px;
-	background: #DB4A38;
-	border-top-left-radius: 5px;
-	border: 1px solid #DB4A38;
-}
-
-#global_content div.event article header div.year {
-	display: block;
-	margin: 12px 0 0 -22px;
-	line-height: 16px;
-	font-size: 1em;
-	text-align: center;
-	transform: rotate(270deg);
-	-o-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-webkit-transform: rotate(270deg);
-}
-
-#global_content div.event article div.date div.day {
-	float: right;
-	margin: -25px 5px 0 25px;
-	font-size: 0.8em;
-	font-weight: bold;
-	text-align: center;
-}
-
-#global_content div.event article div.date div.day span {
-	display: block;
-	text-align: center;
-}
-
-#global_content div.event article p {
-	display: block;
-	margin: 0;
-	font-size: 0.8em;
-	border-right: 1px solid #E0E0E0;
-	border-left: 1px solid #E0E0E0;
-}
-
-#global_content div.event article footer {
-	display: block;
-	font-style: italic;
-	font-size: 0.8em;
-	background: #F0F0F0;
-	border-bottom: 1px solid #E0E0E0;
-	border-right: 1px solid #E0E0E0;
-	border-left: 1px solid #E0E0E0;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-#global_content div.event article footer a {
-	float: right;
-	font-style: normal;
-	text-decoration: none;
-}
-
-#global_content div.event span.consultant,
-#global_content div.event div.description  {
-	padding: 0;
-}
-
-#global_content form.event {
-	min-height: 30px;
-}
-
-#global_content form.event div.field {
-	position: relative;
-}
-
-#global_content form.event div.field.error input, 
-#global_content form.event div.field.error textarea,
-#global_content form.event div.field.error select {
-	border: 1px solid red;
-	background: #F2AEAE;
-}
-
-#global_content form.event div.field .date {
-	float: left;
-	width: 150px;
-}
-
-#global_content form.event div.field .title {
-	width: 50%;
-}
-
-#global_content form.event label {
-	padding: 3px 0 0 4px;
-	position: absolute;
-	top: 0; left: 0;
-	z-index: 1;
-	color: #E0E0E0;
-}
-
-#global_content form.event input, 
-#global_content form.event select {
-	position: relative;
-	z-index: 2;
-	background: transparent;
-}
-
-#global_content form.event textarea {
-	position: relative;
-	z-index: 2;
-	background: transparent;
-	width: 90%;
-}
-
-#global_content form.event input:focus, 
-#global_content form.event select:focus,
-#global_content form.event textarea:focus {
-	background: white;
-	border-color: gray;
-}
-*/
-
