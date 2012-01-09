@@ -4,18 +4,16 @@
 <h2>Patient</h2>
 <div class="patient">
 	<div class="panel">
-		<label for="firstname">First Name</label>
-		<div class="firstname"><?php echo $patient->firstname ?></div>
-		<label for="lastname">Last Name</label>
-		<div class="lastname"><?php echo $patient->lastname ?></div>
-		<label for="birthdate">Birthdate</label>
-		<div class="birthdate"><?php echo date('d-M-Y', strtotime($patient->birthdate)) ?></div>
-		<label for="address">Address</label>
-		<div class="address"><?php echo $patient->address ?></div>
-		<label for="zip">ZIP</label>
-		<div class="zip"><?php echo $patient->zip ?></div>
-		<label for="city">City</label>
-		<div class="city"><?php echo $patient->city ?></div>
+		<form method="post" action="<?php echo url_for('@patient_edit?id=' . $patient->id); ?>" >
+		  <table>
+		    <?php echo $patientForm ?>
+		    <tr>
+		      <td colspan="2">
+		        <input type="submit" class="button" />
+		      </td>
+		    </tr>
+		  </table>
+		</form>
 	</div>
 </div>
 

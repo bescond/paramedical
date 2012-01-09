@@ -16,11 +16,14 @@ default:
     - main.css
     - sfJqueryReloadedPlugin/JqueryAutocomplete.css
     - sfJqueryReloadedPlugin/ui-lightness/jquery-ui-1.8.2.custom.css
+    - fullcalendar/fullcalendar.css
+    - fullcalendar/fullcalendar.print.css
 
   javascripts:
     - sfJqueryReloadedPlugin/jquery-1.4.2.min.js
     - sfJqueryReloadedPlugin/jquery-1.3.2.min.js
     - sfJqueryReloadedPlugin/plugins/jquery-ui-1.7.3.custom.min.js
+    - fullcalendar/fullcalendar.js
 
   has_layout:     true
   layout:         layout

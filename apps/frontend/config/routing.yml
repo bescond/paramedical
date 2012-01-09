@@ -32,17 +32,10 @@ patient_event_create:
   url: /patient/:id/event/create
   param: { module: patient, action: eventCreate }
 
+# Calendar module
 calendar_view:
-  url: /calendar/:year/:month/:day
+  url: /calendar
   param: { module: calendar, action: view }
-
-calendar_next:
-  url: /calendar/:year/:month/:day
-  param: { module: calendar, action: next }
-
-calendar_previous:
-  url: /calendar/:year/:month/:day
-  param: { module: calendar, action: previous }
 
 # Login management
 sf_guard_signin:

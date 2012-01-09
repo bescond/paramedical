@@ -16,4 +16,17 @@ class ConsultantTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Consultant');
     }
+
+	public function findConsultantList()
+	{
+	  $consultants     = array();
+	  $consultants[''] = '';
+	  $modelConsultant = $this->getInstance()->findAll();
+	  foreach ($modelConsultant as $consultant) {
+	      $consultants[$consultant->getId()] = $consultant->getFirstname().' '.$consultant->getLastname();
+	  }
+	  return $consultants;
+	}
+
+
 }

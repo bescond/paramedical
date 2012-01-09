@@ -13,7 +13,7 @@ class EventForm extends BaseEventForm
   public function configure()
   {
     // set consultant name in the select box
-    $this->setWidget('consultant_id', new sfWidgetFormChoice(array('choices' => $this->getConsultants())));
+    $this->setWidget('consultant_id', new sfWidgetFormChoice(array('choices' => Doctrine_Core::getTable('Consultant')->findConsultantList())));
 
     // override widget
     if($this->getPatient()!=null) {
@@ -22,17 +22,6 @@ class EventForm extends BaseEventForm
       $this->setValidator('patient_id', new sfValidatorInteger());
     }
 
-  }
-
-  private function getConsultants()
-  {
-    $consultants     = array();
-    $consultants[''] = '';
-    $modelConsultant = ConsultantTable::getInstance()->findAll();
-    foreach ($modelConsultant as $consultant) {
-        $consultants[$consultant->getId()] = $consultant->getFirstname().' '.$consultant->getLastname();
-    }
-    return $consultants;
   }
 
   private function getPatient()

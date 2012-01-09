@@ -1,2 +1,5 @@
 # plugin list insalled
 http://www.symfony-project.org/plugins/sfDoctrineGuardPlugin
+http://www.symfony-project.org/plugins/sfJqueryReloadedPlugin
+http://www.symfony-project.org/plugins/sfJQueryUIPlugin
+http://www.symfony-project.org/plugins/sfFormExtraPlugin

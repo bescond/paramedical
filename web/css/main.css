@@ -98,6 +98,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 #global_footer {
+	clear: both;
 	padding: 1em 1em 0 0;
 	font-size: x-small;
 	text-align: right;
@@ -125,6 +126,7 @@ input:focus, select:focus, textarea:focus {
 
 #global_content {
 	clear: both;
+	padding-bottom: 5px;
 	background: white;
 }
 
@@ -178,6 +180,7 @@ input:focus, select:focus, textarea:focus {
 
 #global_content div.event {
 	position: relative;
+	margin-right: 5px;
 }
 
 #global_content div.event article {

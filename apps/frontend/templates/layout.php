@@ -19,6 +19,7 @@ use_helper('jQuery');
       </div>
       <div id="global_content">
         <?php echo $sf_content ?>
+        <div style="clear:both"></div>
       </div>
       <div id="global_footer">
         <?php include_partial('global/footer'); ?>

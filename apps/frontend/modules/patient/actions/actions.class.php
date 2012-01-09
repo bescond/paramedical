@@ -25,7 +25,7 @@ class patientActions extends sfActions
 
     // Generate Patient Form
     if(empty($this->patientForm)) {
-      $this->patientForm = new PatientForm();
+      $this->patientForm = new PatientForm($this->patient);
     }
 
     // Get Events
@@ -46,6 +46,32 @@ class patientActions extends sfActions
       return $this->forward404('This patient does not exists !');
     } else {
       return sfView::SUCCESS;
+    }
+  }
+
+ /**
+  * Executes edit action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeEdit(sfWebRequest $request)
+  {
+    // Request parameters
+    $id = $request->getParameter('id');
+    $this->patient = Doctrine_Core::getTable('Patient')->findOneById($id);
+
+    // Retrieve form
+    $patientForm = new PatientForm($this->patient);
+    $patientForm->bind($request->getParameter($patientForm->getName()), $request->getFiles($patientForm->getName()));
+    
+    // Save Patient
+    if ($patientForm->isValid()) {
+      $patientForm->save();
+      $this->redirect('@patient_view?id=' . $id);
+    } else {
+      $this->patientForm = $patientForm;
+      $this->setTemplate('view');
+      $this->executeView($request);
     }
   }
 

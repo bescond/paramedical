@@ -35,7 +35,7 @@ all:
     use_database:           true
 
     # Enable sfGuardAuth module
-    enabled_modules:      [default, sfGuardAuth]
+    enabled_modules:      [default, sfGuardAuth, ksWdCalendar]
 
     # Change default login and secure module
     login_module:           sfGuardAuth
