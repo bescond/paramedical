@@ -13,6 +13,22 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfJQueryUIPlugin');
     $this->enablePlugins('sfFormExtraPlugin');
 
-    sfWidgetFormSchema::setDefaultFormFormatterName('paramedical');
+    //sfWidgetFormSchema::setDefaultFormFormatterName('paramedical');
+  }
+
+  public function configureDoctrine(Doctrine_Manager $manager)
+  {
+  	$manager->setCollate('utf8_unicode_ci');
+    $manager->setCharset('utf8');
+    $manager->setAttribute(Doctrine_Core::ATTR_USE_DQL_CALLBACKS, true);
+
+    Doctrine_Migration_Base::setDefaultTableOptions(
+    	array(
+			'type'              => 'INNODB',
+			'charset'           => 'utf8',
+			'collate'           => 'utf8_unicode_ci',
+			'use_dql_callbacks' => true,
+        )
+    );
   }
 }

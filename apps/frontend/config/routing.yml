@@ -6,37 +6,6 @@ homepage:
   url:   /
   param: { module: patient, action: list }
 
-# generic rules
-# please, remove them by adding more specific rules
-# default_index:
-#   url:   /:module
-#   param: { action: index }
-# 
-#default:
-#  url:   /:module/:action/*
-
-# Patient module
-patient_edit:
-  url: /patient/edit/:id
-  param: { module: patient, action: edit }
-
-patient_list:
-  url: /patient/list
-  param: { module: patient, action: list }
-
-patient_view:
-  url: /patient/:id
-  param: { module: patient, action: view }
-
-patient_event_create:
-  url: /patient/:id/event/create
-  param: { module: patient, action: eventCreate }
-
-# Calendar module
-calendar_view:
-  url: /calendar
-  param: { module: calendar, action: view }
-
 # Login management
 sf_guard_signin:
   url:   /login
@@ -49,3 +18,55 @@ sf_guard_signout:
 sf_guard_password:
   url:   /request_password
   param: { module: sfGuardAuth, action: password }
+
+# Patient module
+patient_list:
+  url: /patient
+  param: { module: patient, action: list }
+
+patient_show:
+  url: /patient/show/:id
+  class: sfDoctrineRoute
+  options: { model: patient, type: object }
+  param: { module: patient, action: show, id:0 }
+
+patient_create:
+  url: /patient/create
+  param: { module: patient, action: create }
+
+patient_new:
+  url: /patient/new
+  param: { module: patient, action: new }
+
+patient_update:
+  url: /patient/:id
+  class: sfDoctrineRoute
+  options: { model: patient, type: object }
+  param: { module: patient, action: update, id:0 }
+
+# Consultant module
+consultant_show:
+  url: /consultant/show/:id
+  class: sfDoctrineRoute
+  options: { model: consultant, type: object }
+  param: { module: consultant, action: show, id:0 }
+
+consultant_update:
+  url: /consultant/:id
+  class: sfDoctrineRoute
+  options: { model: consultant, type: object }
+  param: { module: consultant, action: update, id:0 }
+  requirements: { sf_method:  [get, post] }
+
+# Calendar module
+calendar_show:
+  url: /calendar
+  param: { module: calendar, action: show }
+
+
+
+
+patient_event_create:
+  url: /patient/:id/event/create
+  param: { module: patient, action: eventCreate }
+

@@ -16,7 +16,7 @@ abstract class BaseEventForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'            => new sfWidgetFormInputHidden(),
-      'date'          => new sfWidgetFormJQueryDate(array('config' => '{}', 'date_widget' => new sfWidgetFormDate(array('format'=>'%day%%month%%year%')))),
+      'date'          => new sfWidgetFormDateTime(),
       'title'         => new sfWidgetFormInputText(),
       'description'   => new sfWidgetFormTextarea(),
       'patient_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Patient'), 'add_empty' => false)),
@@ -25,11 +25,11 @@ abstract class BaseEventForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'date'          => new sfValidatorDate(),
+      'date'          => new sfValidatorDateTime(),
       'title'         => new sfValidatorString(array('max_length' => 255)),
       'description'   => new sfValidatorString(array('required' => false)),
-      'patient_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Patient'), 'column' => 'id')),
-      'consultant_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Consultant'), 'column' => 'id', 'required' => false)),
+      'patient_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Patient'))),
+      'consultant_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Consultant'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('event[%s]');

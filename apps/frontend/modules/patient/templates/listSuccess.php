@@ -1,5 +1,22 @@
-<?php include_partial('header', array('defaultSearch' => $defaultSearch)); ?>
+<?php include_partial('search', array('searchKeywords' => $searchKeywords)); ?>
 
-<?php foreach ($list as $record) { ?>
-Patient : <a href="<?php echo url_for('@patient_view?id=' . $record->id) ?>"><?php echo $record->firstname ?> <?php echo $record->lastname ?></a><br />
-<?php } ?>
+<div class="patient_list">
+<table>
+	<thead>
+	<tr>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Birthdate</th>
+	</tr>
+	</thead>
+	<tbody>
+	<?php foreach ($list as $patient) { ?>
+		<tr>
+			<td><?php echo link_to($patient->firstname, 'patient_show', $patient) ?></td>
+			<td><?php echo link_to($patient->lastname, 'patient_show', $patient) ?></td>
+			<td><?php echo link_to($patient->birthdate, 'patient_show', $patient) ?></td>
+		</tr>
+	<?php } ?>
+	</tbody>
+</table>
+</div>

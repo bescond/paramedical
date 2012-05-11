@@ -21,9 +21,9 @@ class ConsultantTable extends Doctrine_Table
 	{
 	  $consultants     = array();
 	  $consultants[''] = '';
-	  $modelConsultant = $this->getInstance()->findAll();
+	  $modelConsultant = $this->findAll();
 	  foreach ($modelConsultant as $consultant) {
-	      $consultants[$consultant->getId()] = $consultant->getFirstname().' '.$consultant->getLastname();
+	      $consultants[$consultant->getId()] = $consultant->getUser()->getFirstName().' '.$consultant->getUser()->getLastName();
 	  }
 	  return $consultants;
 	}

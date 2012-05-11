@@ -14,7 +14,7 @@ Doctrine_Manager::getInstance()->bindComponent('Patient', 'doctrine');
  * @property string $address
  * @property string $zip
  * @property string $city
- * @property Doctrine_Collection $Patients
+ * @property Doctrine_Collection $Event
  * 
  * @method integer             getId()        Returns the current record's "id" value
  * @method string              getFirstname() Returns the current record's "firstname" value
@@ -23,7 +23,7 @@ Doctrine_Manager::getInstance()->bindComponent('Patient', 'doctrine');
  * @method string              getAddress()   Returns the current record's "address" value
  * @method string              getZip()       Returns the current record's "zip" value
  * @method string              getCity()      Returns the current record's "city" value
- * @method Doctrine_Collection getPatients()  Returns the current record's "Patients" collection
+ * @method Doctrine_Collection getEvent()     Returns the current record's "Event" collection
  * @method Patient             setId()        Sets the current record's "id" value
  * @method Patient             setFirstname() Sets the current record's "firstname" value
  * @method Patient             setLastname()  Sets the current record's "lastname" value
@@ -31,7 +31,7 @@ Doctrine_Manager::getInstance()->bindComponent('Patient', 'doctrine');
  * @method Patient             setAddress()   Sets the current record's "address" value
  * @method Patient             setZip()       Sets the current record's "zip" value
  * @method Patient             setCity()      Sets the current record's "city" value
- * @method Patient             setPatients()  Sets the current record's "Patients" collection
+ * @method Patient             setEvent()     Sets the current record's "Event" collection
  * 
  * @package    paramedical
  * @subpackage model
@@ -43,47 +43,77 @@ abstract class BasePatient extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('patient');
-        $this->hasColumn('id', 'integer', null, array(
+        $this->hasColumn('id', 'integer', 8, array(
              'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => true,
              'autoincrement' => true,
-             'notnull' => false,
+             'length' => 8,
              ));
         $this->hasColumn('firstname', 'string', 255, array(
              'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
         $this->hasColumn('lastname', 'string', 255, array(
              'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
-        $this->hasColumn('birthdate', 'date', null, array(
+        $this->hasColumn('birthdate', 'date', 25, array(
              'type' => 'date',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
+             'length' => 25,
              ));
         $this->hasColumn('address', 'string', null, array(
              'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
              'length' => '',
              ));
         $this->hasColumn('zip', 'string', 5, array(
              'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
              'length' => 5,
              ));
         $this->hasColumn('city', 'string', 255, array(
              'type' => 'string',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
              'notnull' => false,
+             'autoincrement' => false,
              'length' => 255,
              ));
+
+        $this->option('collate', 'utf8_unicode_ci');
+        $this->option('charset', 'utf8');
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Event as Patients', array(
+        $this->hasMany('Event', array(
              'local' => 'id',
              'foreign' => 'patient_id'));
     }

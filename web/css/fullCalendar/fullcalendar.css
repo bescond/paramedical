@@ -62,6 +62,7 @@ html .fc,
 .fc-header-title h2 {
 	margin-top: 0;
 	white-space: nowrap;
+	border-bottom: none;
 	}
 	
 .fc .fc-header-space {
@@ -128,7 +129,7 @@ html .fc,
 	}
 	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: #ffc;
+	background: #F0F0F0;
 	}
 	
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
@@ -279,9 +280,9 @@ a.fc-event {
 	}
 	
 .fc-event-skin {
-	border-color: #36c;     /* default BORDER color */
-	background-color: #36c; /* default BACKGROUND color */
-	color: #fff;            /* default TEXT color */
+	border-color: #F5F5F5;     /* default BORDER color */
+	background-color: #D06B64; /* default BACKGROUND color */
+	color: #FFFFFF;            /* default TEXT color */
 	}
 	
 .fc-event-inner {

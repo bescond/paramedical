@@ -9,7 +9,17 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php include_partial('global/header') ?>
-    <?php echo $sf_content ?>
+    <div id="header">
+      <?php include_partial('global/header'); ?>
+    </div>
+    <div id="nav"></div>
+    <div id="sidebar"></div>
+    <div id="content">
+      <?php echo $sf_content ?>
+      <div style="clear:both"></div>
+    </div>
+    <div id="footer">
+      <?php include_partial('global/footer'); ?>
+    </div>
   </body>
 </html>

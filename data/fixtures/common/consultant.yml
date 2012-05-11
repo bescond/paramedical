@@ -1,0 +1,13 @@
+Consultant:
+  consultant_1:
+    job: Psychologue
+    User:         
+      - User_Emilie
+  consultant_2:
+    job: Kinésithérapeute
+    User:         
+      - User_Julien
+  consultant_3:
+    job: Infirmière
+    User:         
+      - User_Alexia

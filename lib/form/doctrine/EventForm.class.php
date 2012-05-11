@@ -30,4 +30,9 @@ class EventForm extends BaseEventForm
     return $patient;
   }
 
+  /*public function render()
+  {
+    return parent::render(array('event_description' => array('int' => 'toto')));
+  }*/
+
 }

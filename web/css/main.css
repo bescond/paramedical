@@ -1,9 +1,11 @@
-body,
-#global {
+/*********************
+ * Default html style
+ *********************/
+body {
 	margin: 0; 
 	padding: 0;
 	font: 10pt "Arial", Verdana, sans-serif;
-	background: #F0F0F0;
+	height: 100%;
 }
 
 a, a:visited {
@@ -24,7 +26,7 @@ h1, h2, h3 {
 input, select, textarea {
 	font-family: "Arial", Verdana, sans-serif;
 	border: 1px solid gray;
-	border-radius: 3px;
+	border-radius: 2px;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -33,230 +35,213 @@ input:focus, select:focus, textarea:focus {
 
 .button {
 	background: #F0F0F0;
-	color: #535353;
-	font-weight: bold;
-	border: 1px solid gray;
-	border-radius: 3px;	
+	color: #444444;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #BBBBBB;
+	border-bottom: 1px solid #AAAAAA;
+	border-left: 1px solid #BBBBBB;
+	border-radius: 2px;
+	height: 25px;
+	cursor: pointer;
 }
 
 .button:hover {
-	border-style: outset;
+	background: #777777;
+	color: white; 
+	border-color: #555555;
+	cursor: pointer;
 }
 
 .error {
 	color: red;
 }
 
-#global_header {
-	background: #202020;
-	padding: 0 0 0 5px;
+div.field.error input, 
+div.field.error textarea,
+div.field.error select {
+	border: 1px solid red;
+	background: #F2AEAE;
 }
 
-#global_header ul {
-	width: 300px;
+/*********************
+ * Header
+ *********************/
+#header {
+	background: #202020;
+}
+
+#header ul {
 	margin: 0;
 	padding: 0;
 }
 
-#global_header ul li {
+#header ul li {
 	float: left;
-	width: 80px;
+	width: 90px;
 	list-style-type: none;
 }
 
-#global_header ul li a, 
-#global_header ul li a:visited,
-#global_header div.spacer {
+#header ul li a, 
+#header ul li a:visited,
+#header div.spacer {
 	display: block;
 	padding: 3px;
 	text-align: center;
 	color: #E0E0E0;
+	font-weight: bold;
 	text-decoration: none;
 	border-bottom: 3px solid #202020;
 }
-#global_header div.spacer {
-	font-weight: bold;
-}
 
-#global_header ul li a.current,
-#global_header ul li a.current:hover {
+#header ul li a.current,
+#header ul li a.current:hover {
 	color: white;
 	font-weight: bold;
 	border-color: #DB4A38;
 }
 
-#global_header ul li a:hover {
+#header ul li a:hover {
 	background: gray;
 	border-color: gray;
 }
 
-#global_header div.user {
-	float: right;
-	color: #E0E0E0;
-	padding: 5px;
-	font-size: 0.9em;
-}
-
-#global_footer {
-	clear: both;
-	padding: 1em 1em 0 0;
-	font-size: x-small;
-	text-align: right;
+/*********************
+ * Nav
+ *********************/
+#nav {
+	padding: 3px;
+	height: 23px;
+	background: #F0F0F0;
 	border-top: 1px solid #E0E0E0;
-	background: #F0F0F0;
-}
-
-#header {
-	padding: 10px;
 	border-bottom: 1px solid #E0E0E0;
+}
+
+#nav a, 
+#nav a:visited {
+	color: blue;
+}
+
+#nav a:hover, 
+#nav a:visited:hover, 
+#nav a:active {
+	color: blue;
+}
+
+#nav div.module {
+	position: absolute;
+}
+
+#nav div.user {
+	position: absolute;
+	right: 53px;
+	color: gray;
+}
+
+#nav div.user a,
+#nav div.user a:visited,
+#nav div.user a:hover {
+	text-decoration: none;
+	color: gray;
+}
+
+#nav div.notification {
+	position: absolute;
+	right: 3px;
+	width: 20px;
+	height: 17px;
+	text-align: center;
+	font-weight: bold;
 	background: #F0F0F0;
+	color: gray;
+	border: 1px solid #CCCCCC;
+	border-radius: 2px;
+	cursor: pointer;
 }
 
-#header .search input:focus {
-	border: 1px solid #4C8EFB;
-}
-
-#header .search .button {
-	background: #4C8EFB;
-	color: white;
-	font-weight: normal;
-	border: 1px solid #3079ED;
-	border-radius: 3px;
-}
-
-#global_content {
-	clear: both;
-	padding-bottom: 5px;
-	background: white;
-}
-
-#global_content div.patient {
-	float: left;
-	width: 200px;
-}
-
-#global_content div.patient div.panel {
-	margin: 0px 5px 5px 5px;
-	padding: 5px;
-}
-
-#global_content div.patient div.panel label {
-	color: #777777;
-}
-
-#global_content div.patient div.panel div {
-	padding: 0 0 5px 0;
-}
-
-#global_content div.events {
-	margin-left: 210px;
-}
-
-#global_content div.events div.panel {
-	padding: 5px;
-	background: #F0F0F0;
-	border-bottom: 1px solid #E0E0E0;
-	border-left: 1px solid #E0E0E0;
+/*********************
+ * Sidebar
+ *********************/
+#sidebar {
+	position: absolute;
+	width: 120px;
+	height: 100%;
+	background: #FFFFFF;
 	border-right: 1px solid #E0E0E0;
 }
 
-#global_content div.events div.panel label {
-	position: absolute;
-	margin: 3px 0 0 3px;
-	color: gray;
-	z-index: -1;
-}
-
-#global_content div.events div.panel input,
-#global_content div.events div.panel textarea,
-#global_content div.events div.panel select {
-	position: relative;
-	z-index: 0;
-}
-
-#global_content div.events div.panel textarea {
-	width: 60%;
-}
-
-#global_content div.event {
-	position: relative;
-	margin-right: 5px;
-}
-
-#global_content div.event article {
-	margin: 5px 0 0 0;
+#sidebar div.list {
 	padding: 5px;
-	border: 1px solid #E0E0E0;
-	border-radius: 5px;
 }
 
-#global_content div.event article header div.date {
-	position: absolute;
-	width: 50px;
-}
-
-#global_content div.event article header div.date div.year {
-	height: 15px;
+#sidebar div.list a {
 	display: block;
-	text-align: center;
-	font-size: 0.8em;
-	font-weight: bold;
-	color: white;
-	background: #DB4A38;
-	border-top-left-radius: 5px;
-}
-
-#global_content div.event article header div.date div.day {
-	height: 23px;
-	background: white;
-	font-size: 0.8em;
-	font-weight: bold;
-	text-align: center;
-	border: 1px solid #E0E0E0;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-#global_content div.event article header div.title {
-	margin: 0 0 0 55px;
-	padding: 0;
-	height: 40px;
-	color: black;
-}
-
-#global_content div.event article header div.title h1 {
-	padding: 0;
-	color: black;
-	font-size: 0.9em;
-	font-weight: normal;
-	border: 0px;
-}
-
-#global_content div.event article header div.title div.consultant {
-	font-size: 0.8em;
-	color: #777777;
-}
-
-#global_content div.event article p {
-	display: block;
-	font-size: 0.8em;
-	color: #535353;
-}
-
-#global_content div.event article footer {
-	display: block;
-	font-size: 0.8em;
-	border-top: 1px solid #E0E0E0;
-}
-
-#global_content div.event article footer a {
-	color: #7796CC;
+	background: #FFFFFF;
 	text-decoration: none;
 }
 
-#global_content div.field.error input, 
-#global_content div.field.error textarea,
-#global_content div.field.error select {
-	border: 1px solid red;
-	background: #F2AEAE;
+#sidebar div.list a:hover {
+	background: #F0F0F0;
+	color: #000000;
+}
+
+/*********************
+ * Content
+ *********************/
+#content {
+	position: absolute;
+	left: 121px;
+	right: 0px;
+	background: #FFFFFF;
+}
+
+#content div.search {
+	padding: 5px;
+	background: #F0F0F0;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+#content div.search input {
+	font-weight: bold;
+}
+
+#content div.search input:focus {
+	border: 1px solid #4C8EFB;	
+}
+
+#content div.search .button {
+	color: white;
+	font-weight: bold;
+	background: #4C8EFB;
+	border: 1px solid #3079ED;
+	border-radius: 2px;
+}
+
+#content div.search .button:hover {
+	font-weight: bold;
+	background: #3A7EEC;
+	border: 1px solid #2F5BB7;
+}
+
+#content div#calendar {
+	padding: 10px;
+	height: 80%;
+}
+
+/*********************
+ * Footer
+ *********************/
+#footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 23px;
+	border-top: 1px solid #E0E0E0;
+	background: #F0F0F0;
+	text-align: right;
+	font-size: x-small;
+}
+
+#footer div.version {
+	padding: 3px;
+	color: gray;
 }

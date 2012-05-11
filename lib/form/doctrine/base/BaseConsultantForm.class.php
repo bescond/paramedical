@@ -15,17 +15,15 @@ abstract class BaseConsultantForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'        => new sfWidgetFormInputHidden(),
-      'firstname' => new sfWidgetFormInputText(),
-      'lastname'  => new sfWidgetFormInputText(),
-      'job'       => new sfWidgetFormInputText(),
+      'id'      => new sfWidgetFormInputHidden(),
+      'job'     => new sfWidgetFormInputText(),
+      'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'id'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'firstname' => new sfValidatorString(array('max_length' => 255)),
-      'lastname'  => new sfValidatorString(array('max_length' => 255)),
-      'job'       => new sfValidatorString(array('max_length' => 255)),
+      'id'      => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'job'     => new sfValidatorString(array('max_length' => 255)),
+      'user_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('consultant[%s]');

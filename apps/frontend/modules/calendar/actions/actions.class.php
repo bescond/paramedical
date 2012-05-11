@@ -1,12 +1,12 @@
 <?php
 
 /**
- * calendar actions.
+ * Calendar actions
  *
- * @package    paramedical
- * @subpackage calendar
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * @package    apps.frontend.modules.calendar.actions
+ * @author     Mathieu Bescond <mbescond@gmail.com>
+ * @copyright  Mathieu Bescond <mbescond@gmail.com>
+ * @link       https://github.com/bescond/paramedical
  */
 class calendarActions extends sfActions
 {
@@ -16,13 +16,16 @@ class calendarActions extends sfActions
   *
   * @param sfRequest $request A request object
   */
-  public function executeView(sfWebRequest $request)
+  public function executeShow(sfWebRequest $request)
   {
-    $this->defaultSearch = '';
+    $this->form = new EventForm(array(), array());
+    $this->form->setDefault('consultant_id', $this->getUser()->getGuardUser()->getConsultant()->getId());
 
-    $this->events = Doctrine_Core::getTable('Event')->findAll();
-
-  	return sfView::SUCCESS;
+    if (!is_null($this->getUser()->getGuardUser()->getConsultant()->getId())) {
+      $this->events = EventTable::getInstance()->findByConsultantId($this->getUser()->getGuardUser()->getConsultant()->getId());
+    } else {
+      $this->events = EventTable::getInstance()->findAll();
+    }
   }
 
 }

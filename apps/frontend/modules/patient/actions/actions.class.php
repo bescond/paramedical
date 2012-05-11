@@ -1,78 +1,50 @@
 <?php
 
 /**
- * patient actions.
+ * Patient actions
  *
- * @package    paramedical
- * @subpackage patient
- * @author     Your name here
- * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * @package    apps.frontend.modules.patient.actions
+ * @author     Mathieu Bescond <mbescond@gmail.com>
+ * @link       https://github.com/bescond/paramedical
  */
 class patientActions extends sfActions
 {
- /**
-  * Executes view action
-  *
-  * @param sfRequest $request A request object
-  */
-  public function executeView(sfWebRequest $request)
+
+  public function preExecute()
   {
-    // Request parameters
-    $id = $request->getParameter('id');
-
-    // Get Patient
-    $this->patient = Doctrine_Core::getTable('Patient')->findOneById($id);
-
-    // Generate Patient Form
-    if(empty($this->patientForm)) {
-      $this->patientForm = new PatientForm($this->patient);
-    }
-
-    // Get Events
-    $this->events = Doctrine_Core::getTable('Event')
-      ->createQuery()
-      ->where('patient_id = ?', array($id))
-      ->orderBy('date DESC')
-      ->execute();
-
-    // Generate Event form
-    if (empty($this->eventForm)) {
-      $this->eventForm = new EventForm(array(), array('patient' => $this->patient));
-    }
-
-    $this->initSearchForm();
-    
-    if (empty($this->patient)) {
-      return $this->forward404('This patient does not exists !');
-    } else {
-      return sfView::SUCCESS;
-    }
+    $this->initSearchKeywords();
   }
 
  /**
-  * Executes edit action
+  * Executes new action
   *
   * @param sfRequest $request A request object
   */
-  public function executeEdit(sfWebRequest $request)
+  public function executeNew(sfWebRequest $request)
   {
-    // Request parameters
-    $id = $request->getParameter('id');
-    $this->patient = Doctrine_Core::getTable('Patient')->findOneById($id);
+    $this->form = new PatientForm();
+  }
 
-    // Retrieve form
-    $patientForm = new PatientForm($this->patient);
-    $patientForm->bind($request->getParameter($patientForm->getName()), $request->getFiles($patientForm->getName()));
-    
-    // Save Patient
-    if ($patientForm->isValid()) {
-      $patientForm->save();
-      $this->redirect('@patient_view?id=' . $id);
-    } else {
-      $this->patientForm = $patientForm;
-      $this->setTemplate('view');
-      $this->executeView($request);
-    }
+ /**
+  * Executes create action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeCreate(sfWebRequest $request)
+  {
+    $this->form = new PatientForm();
+    $this->processForm($request, $this->form);
+  }
+
+ /**
+  * Executes show action
+  *
+  * @param sfRequest $request A request object
+  */
+  public function executeShow(sfWebRequest $request)
+  {
+    $this->patient = $this->getRoute()->getObject();
+    $this->form = new PatientForm($this->patient);
   }
 
  /**
@@ -82,55 +54,33 @@ class patientActions extends sfActions
   */
   public function executeList(sfWebRequest $request)
   {
-    // Search for a patient...
-    $search = '';
-
     if ($request->isMethod('post')) {
-      $search = $request->getParameter('search');
-      
-      $this->list = Doctrine_Core::getTable('Patient')
-        ->createQuery()
-        ->where('firstname LIKE ? OR lastname LIKE ?', array('%' . $search . '%', '%' . $search . '%'))
-        ->execute();
-
-      // Unique record found !!!
-      if (count($this->list) == 1) {
-        $this->redirect('@patient_view?id=' . $this->list[0]->id);
-      }
-
-    // List all patients !
+      $this->searchKeywords($request);
     } else {
-      $this->list = Doctrine_Core::getTable('Patient')->findAll();
+      $this->list = PatientTable::getInstance()->findAll();
     }
-
-    $this->initSearchForm($search);
-
-    return sfView::SUCCESS;
   }
 
  /**
-  * Executes event create action
+  * Executes update action
   *
   * @param sfRequest $request A request object
   */
-  public function executeEventCreate(sfWebRequest $request)
+  public function executeUpdate(sfWebRequest $request)
   {
-    
-    // Request parameters
-    $id = $request->getParameter('id');
-    $this->patient = Doctrine_Core::getTable('Patient')->findOneById($id);
+    $this->form = new PatientForm($this->getRoute()->getObject());
+    $this->processForm($request, $this->form);
 
-    // Create an event
-    $eventForm = new EventForm(array(), array('patient' => $this->patient));
-    $eventForm->bind($request->getParameter($eventForm->getName()), $request->getFiles($eventForm->getName()));
-    
-    if ($eventForm->isValid()) {
-      $eventForm->save();
-      $this->redirect('@patient_view?id=' . $id);
-    } else {
-      $this->eventForm = $eventForm;
-      $this->setTemplate('view');
-      $this->executeView($request);
+    $this->setTemplate('show');
+  }
+
+  protected function processForm(sfWebRequest $request, sfForm $form)
+  {
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+   
+    if ($form->isValid()) {
+      $patient = $form->save();
+      $this->redirect($this->generateUrl('patient_show', $patient));
     }
   }
 
@@ -138,8 +88,25 @@ class patientActions extends sfActions
    * Init search form
    * @param String $default Default search value
    */
-  private function initSearchForm($default = '')
+  private function initSearchKeywords($default = '')
   {
-    $this->defaultSearch = $default;
+    $this->searchKeywords = $default;
+  }
+
+  /**
+   * search form
+   * @param String $search  Value search
+   */
+  private function searchKeywords(sfWebRequest $request)
+  {
+    // init search form
+    $search = $request->getParameter('keywords');
+    $this->initSearchKeywords($search);
+
+    $this->list = PatientTable::getInstance()->findBySearchKeywords($search);
+    // Unique record found
+    if (count($this->list) == 1) {
+      $this->redirect($this->generateUrl('patient_show', $this->list[0]));
+    }
   }
 }

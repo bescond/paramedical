@@ -1,0 +1,11 @@
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Administrator group
+    Permissions:
+      - Permission_admin
+  Group_consultant:
+    name:           consultant
+    description:    Consultant group
+    Permissions:
+      - Permission_admin

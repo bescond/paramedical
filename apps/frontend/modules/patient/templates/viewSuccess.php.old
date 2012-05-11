@@ -1,18 +1,12 @@
-<?php include_partial('header', array('defaultSearch' => $defaultSearch)); ?>
+<?php include_partial('search', array('defaultSearch' => $defaultSearch)); ?>
 
 <!-- Patient -->
 <h2>Patient</h2>
 <div class="patient">
 	<div class="panel">
 		<form method="post" action="<?php echo url_for('@patient_edit?id=' . $patient->id); ?>" >
-		  <table>
 		    <?php echo $patientForm ?>
-		    <tr>
-		      <td colspan="2">
-		        <input type="submit" class="button" />
-		      </td>
-		    </tr>
-		  </table>
+	        <input type="submit" class="button" />
 		</form>
 	</div>
 </div>
@@ -22,14 +16,8 @@
 
 <div class="panel">
 <form method="post" action="<?php echo url_for('@patient_event_create?id=' . $patient->id); ?>" class="event">
-  <table>
     <?php echo $eventForm ?>
-    <tr>
-      <td colspan="2">
-        <input type="submit" class="button" />
-      </td>
-    </tr>
-  </table>
+	<input type="submit" class="button" />
 </form>
 </div>
 

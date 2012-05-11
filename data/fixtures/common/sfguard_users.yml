@@ -1,0 +1,37 @@
+sfGuardUser:
+  User_admin:
+    first_name:     Mathieu
+    last_name:      Bescond
+    email_address:  mbescond@gmail.com
+    username:       admin
+    password:       admin
+    is_super_admin: true
+    Groups:         
+      - Group_admin
+  User_Emilie:
+    first_name:    Emilie
+    last_name:     Coisy
+    email_address: emilie.coisy@gmail.com
+    username:      emilie
+    password:      emilie
+    is_super_admin: false
+    Groups:         
+      - Group_consultant
+  User_Julien:
+    first_name:    Julien
+    last_name:     Allender
+    email_address: julien.allender@gmail.com
+    username:      julien
+    password:      julien
+    is_super_admin: false
+    Groups:         
+      - Group_consultant
+  User_Alexia:
+    first_name:    Alexia
+    last_name:     Fuselier
+    email_address: alexia.fuselier@gmail.com
+    username:      alexia
+    password:      alexia
+    is_super_admin: false
+    Groups:         
+      - Group_consultant

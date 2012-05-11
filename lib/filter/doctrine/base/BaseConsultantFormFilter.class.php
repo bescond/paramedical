@@ -13,15 +13,13 @@ abstract class BaseConsultantFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'firstname' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'lastname'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'job'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'job'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'user_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
     ));
 
     $this->setValidators(array(
-      'firstname' => new sfValidatorPass(array('required' => false)),
-      'lastname'  => new sfValidatorPass(array('required' => false)),
-      'job'       => new sfValidatorPass(array('required' => false)),
+      'job'     => new sfValidatorPass(array('required' => false)),
+      'user_id' => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('User'), 'column' => 'id')),
     ));
 
     $this->widgetSchema->setNameFormat('consultant_filters[%s]');
@@ -41,10 +39,9 @@ abstract class BaseConsultantFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'        => 'Number',
-      'firstname' => 'Text',
-      'lastname'  => 'Text',
-      'job'       => 'Text',
+      'id'      => 'Number',
+      'job'     => 'Text',
+      'user_id' => 'ForeignKey',
     );
   }
 }

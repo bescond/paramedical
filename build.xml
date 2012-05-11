@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="paramedical" basedir="." default="app">
+	<property name="builddir" value="${ws}/build" />
+
+    <target name="phpcs">
+        <echo msg="PHP CodeSniffer..." />
+        <exec command="phpcs --extensions=php --severity=1 -p --standard=${ws}/ruleset.xml --report=checkstyle --report-file=${builddir}/logs/checkstyle.xml ${ws}" logoutput="true" />
+    </target>
+    
+</project>

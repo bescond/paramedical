@@ -16,4 +16,11 @@ class EventTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Event');
     }
+
+    public function countCurrentEventByConsultantId($consultantId) 
+    {
+    	return $this->createQuery()
+	        ->where('consultant_id = ? AND DATE(date) = ?', array($consultantId, date('Y-m-d')))
+	        ->count();
+    }
 }

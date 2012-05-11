@@ -1,0 +1,33 @@
+Patient:
+  patient_1:
+    firstname: Ghislain
+    lastname:  Bouchet
+    birthdate: '1978-05-14'
+    address:   |
+      Beauséjour
+    zip:       44000
+    city:      Nantes
+  patient_2:
+    firstname: Martin
+    lastname:  Bescond
+    birthdate: '1980-07-18'
+    address:   |
+      4, rue de la Gare
+    zip:       44260
+    city:      Savenay
+  patient_3:
+    firstname: Emilie
+    lastname:  Coisy
+    birthdate: '1980-07-29'
+    address:   |
+      4, rue de la Gare
+    zip:       44260
+    city:      Savenay
+  patient_4:
+    firstname: Mathieu
+    lastname:  Bescond
+    birthdate: '1979-05-28'
+    address:   |
+      4, rue de la Gare
+    zip:       44260
+    city:      Savenay

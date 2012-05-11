@@ -16,4 +16,11 @@ class PatientTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Patient');
     }
+
+    public function findBySearchKeywords($search)
+    {
+    	return $this->createQuery()
+	        ->where('firstname LIKE ? OR lastname LIKE ?', array('%' . $search . '%', '%' . $search . '%'))
+	        ->execute();
+    }
 }

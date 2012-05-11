@@ -1,74 +1,146 @@
-Patient:
-  connection: doctrine
-  tableName: patient
-  columns:
-    id:
-      type: integer
-      primary: true
-      autoincrement: true
-      notnull: false
-    firstname:
-      type: string(255)
-      notnull: true
-    lastname:
-      type: string(255)
-      notnull: true
-    birthdate:
-      type: date
-      notnull: false
-    address:
-      type: string()
-      notnull: false
-    zip:
-      type: string(5)
-      notnull: false
-    city:
-      type: string(255)
-      notnull: false
+options:
+  collate: utf8_unicode_ci
+  charset: utf8
 
 Consultant:
   connection: doctrine
   tableName: consultant
   columns:
     id:
-      type: integer
+      type: integer(8)
+      fixed: false
+      unsigned: false
       primary: true
       autoincrement: true
-      notnull: false
-    firstname:
-      type: string(255)
-      notnull: true
-    lastname:
-      type: string(255)
-      notnull: true
     job:
       type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: true
+      autoincrement: false
+    user_id:
+      type: integer
+  relations:
+    Event:
+      local: id
+      foreign: consultant_id
+      type: many
+    User:
+      class:        sfGuardUser
+      local:        user_id
+      foreign:      id
+      type:         one
+      foreignType:  one
 
 Event:
   connection: doctrine
   tableName: event
   columns:
     id:
-      type: integer
+      type: integer(8)
+      fixed: false
+      unsigned: false
       primary: true
       autoincrement: true
-      notnull: false
     date:
-      type: datetime
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: true
+      autoincrement: false
     title:
       type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: true
+      autoincrement: false
     description:
       type: string()
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: false
+      autoincrement: false
     patient_id:
-      type: integer
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: true
+      autoincrement: false
     consultant_id:
-      type: integer
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
       notnull: false
+      autoincrement: false
   relations:
-    Patient: { onDelete: CASCADE, local: patient_id, foreign: id, foreignAlias: Patients }
-    Consultant: { onDelete: CASCADE, local: consultant_id, foreign: id, foreignAlias: Consultants }
+    Consultant:
+      local: consultant_id
+      foreign: id
+      type: one
+    Patient:
+      local: patient_id
+      foreign: id
+      type: one
+Patient:
+  connection: doctrine
+  tableName: patient
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    firstname:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    lastname:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    birthdate:
+      type: date(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    address:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    zip:
+      type: string(5)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    city:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+  relations:
+    Event:
+      local: id
+      foreign: patient_id
+      type: many

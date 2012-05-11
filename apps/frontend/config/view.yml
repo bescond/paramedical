@@ -17,7 +17,7 @@ default:
     - sfJqueryReloadedPlugin/JqueryAutocomplete.css
     - sfJqueryReloadedPlugin/ui-lightness/jquery-ui-1.8.2.custom.css
     - fullcalendar/fullcalendar.css
-    - fullcalendar/fullcalendar.print.css
+    - fullcalendar/fullcalendar.print.css: {media: print}
 
   javascripts:
     - sfJqueryReloadedPlugin/jquery-1.4.2.min.js

@@ -13,17 +13,23 @@ use_helper('jQuery');
     <?php include_javascripts() ?>
   </head>
   <body>
-    <div id="global">
-      <div id="global_header">
-        <?php include_partial('global/header'); ?>
+    <div id="header">
+      <?php include_partial('global/header'); ?>
+    </div>
+    <?php if ($sf_user->isAuthenticated()) { ?>
+      <div id="nav">
+        <?php include_partial('global/nav'); ?>
       </div>
-      <div id="global_content">
-        <?php echo $sf_content ?>
-        <div style="clear:both"></div>
+      <div id="sidebar">
+        <?php include_partial('global/sidebar'); ?>
       </div>
-      <div id="global_footer">
-        <?php include_partial('global/footer'); ?>
-      </div>
+    <?php } ?>
+    <div id="content">
+      <?php echo $sf_content ?>
+      <div style="clear:both"></div>
+    </div>
+    <div id="footer">
+      <?php include_partial('global/footer'); ?>
     </div>
   </body>
 </html>

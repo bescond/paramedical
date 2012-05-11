@@ -43,7 +43,6 @@ all:
 
     secure_module:          sfGuardAuth
     secure_action:          secure
-    #default_culture: fr_FR
 
     # Standard Helprs
     standard_helpers: 
@@ -53,6 +52,3 @@ all:
       - I18N
       - Date
       - jQuery
-
-    # I18N
-    i18n: on
